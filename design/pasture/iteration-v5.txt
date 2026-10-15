@@ -1,0 +1,40 @@
+沿水岸牧马 · 第五轮：植物覆盖与 H06 采食骨骼样片
+
+对照依据：visual-v2/images/00-riverside-atmosphere.png。
+上一轮画面：../../artifacts/environment-v4/scene-desktop.png。
+本轮画面：../../artifacts/environment-v5/scene-graze.png。
+
+植物
+草丛 6,800 → 19,000，每丛 5 → 8 片，更宽、更长并交叠；覆盖范围扩展到前景 Z=15。
+莎草 180 → 440，贴地阔叶 520 → 1,700，蕨形植物 65 → 140，绿灌木 58 → 225，红叶灌木 13 → 22。
+柳叶 10,368 → 24,192，补充内层垂枝；远岸树冠 180 → 300，增加交叠并回调高度，保留水带和主树轮廓。
+维持马匹、牧者、岩石与水域避让；草地色转为偏暖灰绿，保留土路和蹄边空地。
+与设定仍有差距：程序柳枝规律感、远岸树形与地貌雕刻感需要继续精修。本轮完成覆盖密度迭代，不宣称最终美术验收。
+
+H06
+基于提供的 gemini_generated_video_2265f448.mp4 手工制作骨骼动作，非视频自动动捕。
+46 骨骼，派生三角网格 20,000 面；原始模型不改动。
+新增 GrazeDown 1.7 秒、GrazeLoop 3.4 秒、GrazeUp 0.8 秒。
+主场景循环：Idle 8 秒 → Down 1.7 秒 → Loop 两轮 6.8 秒 → Up 0.8 秒。
+独立检查页可选全部五个片段、拖动时间、显示骨架；Walk 保留在平地检查页。
+WebGPU 实测：采食四蹄最高误差约 3.49 毫米，水平支撑漂移为零；河岸最高误差约 3.97 毫米，口鼻最低离地约 6.4 厘米。
+四个动作接缝检查了全部导出网格顶点，最大位置差小于 0.001 毫米。
+可编辑文件：../../artifacts/h06/H06-rig-study.blend；运行模型：/models/h06/horse.glb。
+动画仍是变形样片，颈肩体积、局部权重和正式变形拓扑待精修。H07、H08 与其他马匹绑定待后续制作。
+
+验证入口
+npm test
+npm run build
+npm run check:browser
+npm run check:motion
+npm run check:graze
+几何统计见 environment-v5.json；本轮没有做 60 FPS 性能验收。
+
+H06 后续修正：回正与待机可见性
+原模型头部侧转被错误沿用为中立姿态，旧 Idle 毫米级头颈变化不明显。
+新增 Neutral 朝前中立姿态、HeadReturn 1.2 秒原始偏头回正片段、Graze 8 秒完整采食循环。
+Idle 8 秒含头颈轻摆、点头、独立耳动和尾动；Walk 及 GrazeUp 共用新中立姿态。
+导出实测：Idle 口鼻位移约 14 厘米，头部偏航范围约 18 度；Walk 头部偏航最大约 1.5 度。
+回正和采食抬头与 Neutral 全网格位置差均小于 0.001 毫米。
+最新接地与口鼻高度以 artifacts/h06/graze-contact-report.json 为准，替代上文第五轮初版数据。
+新增回归命令：npm run check:neutral。

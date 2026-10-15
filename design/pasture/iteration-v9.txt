@@ -1,0 +1,53 @@
+沿水岸牧马 · 其余六匹马与牧马人骨骼动作 · 2026-10-14
+
+本轮范围：H01、H02、H03、H04、H05、H08、P01。
+H06、H07 的模型、绑定、动作及已精修尾毛保持原版。
+
+交付动作
+H01：36 骨骼，Neutral / Idle。站姿待机含头颈、耳朵和尾部微动。
+H02：36 骨骼，Neutral / Idle，校正原模型偏头。
+H03：36 骨骼，Neutral / Idle / Look，回望后回正。
+H04：36 骨骼，Neutral / Idle / GrazeDown / GrazeLoop / GrazeUp / Graze / Walk。
+H05：36 骨骼，Neutral / Idle / GrazeDown / GrazeLoop / GrazeUp / Graze，校正原模型明显偏头。
+H08：36 骨骼，同 H05 动作类型，保留独立花斑与体型。
+P01：22 骨骼，APose / Neutral / Idle / Look。自然垂手、呼吸与衣摆微动、左右观察并回正。
+
+场景行为
+全部 9 个角色接入骨骼动作。各马使用不同待机时长及播放偏移，避免同时低头。
+H01/H02 站定待机；H03/H07 回望；H04/H05/H06/H08 采食；P01 间歇观察。
+H04 Walk 仅在平地动作检查页播放，四拍步态、支撑期根位移同步。
+暂停按钮同时停止全部角色和环境风动。
+动作检查页可选择全部 9 个角色；角色详情链接直接打开对应编号。
+
+绑定方法
+每个模型独立标定头颈、尾根和四肢。前后肢分别按蹄壳间隙划分左右权重，避免中线切穿蹄子。
+头颈使用保长旋转建立正向中立姿态，Idle、Look、Graze 共享回正状态。
+采食姿态根据实际变形后嘴部最低顶点数值校准，平地目标离地约 22 mm。
+蹄壳、牧马人靴底采用刚性权重；袖口、手、衣摆使用独立区域与控制骨。
+
+视频与制作阶段
+以视频节奏为参考手工编排，未进行视频动作捕捉。
+H03/H04 棕马部分视频身份仍有歧义，H05 为候选映射；只借用节奏，不改变模型身份。
+H08 使用 df7c0ebc 后半段完整低头与抬头节奏；P01 使用 8f3f59dd 的站姿左右观察。
+所有源模型和视频保留原样。当前是三角网格变形样片，尚未进行人工变形拓扑重建与最终美术验收。
+H01/H02 原画屈肢姿势、河岸行走与起停、牧马人手指和衣袖精修仍为后续工作。
+
+可复现与检查
+node scripts/prepare-cast.mjs
+Blender --factory-startup -b -t 4 --python scripts/rig-cast.py -- H01（逐个替换编号）
+node scripts/pack-cast.mjs
+node scripts/update-cast-status.mjs
+node scripts/write-asset-registry.mjs
+npm run check:cast
+编辑文件：artifacts/<小写编号>/<编号>-rig-study.blend
+运行资产：public/models/<小写编号>/horse.glb
+检查数据：artifacts/cast-motion/check-report.json；单体截图：artifacts/<小写编号>/*-side.png、*-front.png
+
+验证结果
+7 个新增角色已通过导出后的 WebGPU 网格采样检查；站定脚部漂移小于 0.002 m，循环与采食衔接误差小于 0.001 m。
+H04 平地慢走支撑期脚底高度小于 3.5 mm、水平漂移小于 0.001 mm。
+H08 与牧马人改为共享平整落脚区，解决相邻地形缓坡叠加造成的高差。
+主场景 9 个角色脚底采样误差最大约 4.1 mm；H04/H05/H08 采食嘴部最低离地分别约 21.5 / 22.9 / 21.8 mm。
+npm test（8 项）、npm run build、check:cast、check:motion、check:neutral、check:graze、check:h07、check:realism、check:browser 全部通过。
+浏览器检查包含真实 WebGPU、9 角色动态、全场暂停、5 个视角、角色详情、移动端和无 GPU 回退。
+上述为接地、连续性与运行验证，未替代最终美术验收及性能目标验收。

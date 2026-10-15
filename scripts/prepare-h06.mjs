@@ -1,0 +1,12 @@
+﻿import {NodeIO} from '@gltf-transform/core';
+import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
+import {dequantize,textureCompress,prune} from '@gltf-transform/functions';
+import sharp from 'sharp';
+import {mkdir} from 'node:fs/promises';
+await mkdir('artifacts/h06',{recursive:true});
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);
+const doc=await io.read('public/models/prepared/48825d13227c2967f8302b18fe1ea6b5.glb');
+await doc.transform(dequantize(),textureCompress({encoder:sharp,targetFormat:'png'}),prune());
+for(const ext of doc.getRoot().listExtensionsUsed())if(['KHR_mesh_quantization','EXT_texture_webp'].includes(ext.extensionName))ext.dispose();
+await io.write('artifacts/h06/editable.glb',doc);
+console.log('H06 editable derived mesh written');

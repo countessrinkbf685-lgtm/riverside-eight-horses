@@ -1,0 +1,327 @@
+{
+  "title": "沿水岸牧马 · 缓弯河道布局",
+  "date": "2026-10-13",
+  "status": "designed_graybox_starting_values_not_projection_calibrated",
+  "coordinates": {
+    "unit": "meter",
+    "up": "+Y",
+    "right": "+X",
+    "toward_viewer": "+Z",
+    "heading_degrees": "0=+X, 90=+Z, 180=-X, 270=-Z; not engine Euler angles"
+  },
+  "footprint_m": {
+    "x": [
+      -12,
+      12
+    ],
+    "z": [
+      -12,
+      6
+    ]
+  },
+  "anchors": [
+    {
+      "id": "H01",
+      "x_m": -7.4,
+      "z_m": 2.4,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 180,
+      "reference_uv": [
+        0.192,
+        0.646
+      ]
+    },
+    {
+      "id": "H02",
+      "x_m": -6.3,
+      "z_m": 4.6,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 180,
+      "reference_uv": [
+        0.222,
+        0.758
+      ]
+    },
+    {
+      "id": "H03",
+      "x_m": -5.1,
+      "z_m": -2.4,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 270,
+      "reference_uv": [
+        0.286,
+        0.504
+      ]
+    },
+    {
+      "id": "H04",
+      "x_m": -4.3,
+      "z_m": 0.2,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 180,
+      "reference_uv": [
+        0.306,
+        0.61
+      ]
+    },
+    {
+      "id": "H05",
+      "x_m": -2.9,
+      "z_m": -2.4,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 0,
+      "reference_uv": [
+        0.373,
+        0.574
+      ]
+    },
+    {
+      "id": "H06",
+      "x_m": 0.4,
+      "z_m": 3.4,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 0,
+      "reference_uv": [
+        0.516,
+        0.724
+      ]
+    },
+    {
+      "id": "H07",
+      "x_m": 2.2,
+      "z_m": -1.6,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 90,
+      "reference_uv": [
+        0.591,
+        0.611
+      ]
+    },
+    {
+      "id": "H08",
+      "x_m": 8.4,
+      "z_m": 2.0,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 180,
+      "reference_uv": [
+        0.849,
+        0.683
+      ]
+    },
+    {
+      "id": "P01",
+      "x_m": 10.2,
+      "z_m": 2.2,
+      "y_m": null,
+      "y_rule": "terrain_height_at_xz",
+      "heading_deg": 180,
+      "reference_uv": [
+        0.917,
+        0.705
+      ]
+    }
+  ],
+  "trees": [
+    {
+      "id": "T01",
+      "x_m": 3.4,
+      "z_m": 0.8,
+      "root_avoidance_radius_m": 1.3,
+      "canopy_reference_radius_m": 5.5
+    },
+    {
+      "id": "T02",
+      "x_m": -10.3,
+      "z_m": -1.0,
+      "note": "split red-leaf undergrowth from small-leaf tree"
+    }
+  ],
+  "terrain": {
+    "range_y_m": [
+      0.25,
+      0.8
+    ],
+    "bank_top_y_m": [
+      0.25,
+      0.5
+    ],
+    "note": "Design starting elevations; blend banks and calibrate each hoof contact."
+  },
+  "behavior": {
+    "walking_ids": [
+      "H04",
+      "H06"
+    ],
+    "max_simultaneous_walking": 2,
+    "excursion_m": [
+      0.5,
+      1.5
+    ],
+    "fixed_composition_groups": [
+      [
+        "H01",
+        "H02"
+      ],
+      [
+        "H08",
+        "P01"
+      ]
+    ],
+    "shore_rule": "All horses and herder remain on near-bank dry land; no drinking or wading added."
+  },
+  "camera": {
+    "home": {
+      "position_m": [
+        0,
+        6.5,
+        24
+      ],
+      "target_m": [
+        0,
+        2.3,
+        0
+      ],
+      "projection": "orthographic first; calibrate camera height and window to painting"
+    },
+    "rail": "front observation rail; presets are illustrative starting positions",
+    "presets": [
+      {
+        "id": "C1",
+        "name": "左侧马群",
+        "position_m": [
+          -6,
+          3.8,
+          8.5
+        ],
+        "target_m": [
+          -5.3,
+          1.1,
+          0.5
+        ]
+      },
+      {
+        "id": "C2",
+        "name": "柳下灰马",
+        "position_m": [
+          0.7,
+          3.6,
+          9
+        ],
+        "target_m": [
+          0.4,
+          1.1,
+          3.4
+        ]
+      },
+      {
+        "id": "C3",
+        "name": "牧者花马",
+        "position_m": [
+          9,
+          3.6,
+          8.5
+        ],
+        "target_m": [
+          9,
+          1.1,
+          2
+        ]
+      }
+    ]
+  },
+  "acceptance": "Match original projected figures and occlusion; verify two legible banks, continuous open channel, dry hooves and root collar across permitted cameras.",
+  "version": "riverside-v2",
+  "river": {
+    "id": "W01",
+    "interpretation": "user_approved_design_inference_not_historical_measurement",
+    "near_bank_xz_m": [
+      [
+        -14,
+        -4.0
+      ],
+      [
+        -10,
+        -4.6
+      ],
+      [
+        -6,
+        -5.1
+      ],
+      [
+        -2,
+        -4.6
+      ],
+      [
+        2,
+        -3.8
+      ],
+      [
+        6,
+        -3.0
+      ],
+      [
+        10,
+        -2.8
+      ],
+      [
+        14,
+        -3.1
+      ]
+    ],
+    "far_bank_xz_m": [
+      [
+        -14,
+        -8.2
+      ],
+      [
+        -10,
+        -8.8
+      ],
+      [
+        -6,
+        -9.3
+      ],
+      [
+        -2,
+        -8.8
+      ],
+      [
+        2,
+        -8.0
+      ],
+      [
+        6,
+        -7.2
+      ],
+      [
+        10,
+        -7.0
+      ],
+      [
+        14,
+        -7.300000000000001
+      ]
+    ],
+    "curve": "Catmull-Rom, endpoint duplication, 16 samples per segment",
+    "width_along_z_m": 4.2,
+    "surface_y_m": 0,
+    "extension": "continue beyond both sides of the camera frustum",
+    "flow_direction": "unspecified; adjustable visual parameter",
+    "appearance": "muted gray-green; fine horizontal ripples and fragmented reflection"
+  },
+  "banks": {
+    "id": "G02",
+    "body_boundary_navigation_margin_m": 0.8,
+    "contact_validation": "Check all hooves, grazing muzzle and full animated body envelope against shore; do not use torso point alone.",
+    "left_rocks": "overlap near-bank silhouette and conceal the left channel entry",
+    "far_bank": "low sparse vegetation; no dense forest wall"
+  }
+}

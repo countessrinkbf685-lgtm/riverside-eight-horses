@@ -1,0 +1,12 @@
+[
+  {
+    "source": "E:\\fabotanic\\src\\modules\\math.js",
+    "sha256": "4707c4b7e8092b2b7a8ba0f29cb7e0f5f5c4ac4153d473c2a92c5d0f1ab7ca39",
+    "adaptation": "Only module wrapper/import/export changed."
+  },
+  {
+    "source": "E:\\fabotanic\\src\\modules\\geometry.js",
+    "sha256": "8fbe89a1809ce16c70333dda3a60f8d3aa9e0f0f77938b7a345d8c9ab2a99572",
+    "adaptation": "Only module wrapper/import/export changed."
+  }
+]

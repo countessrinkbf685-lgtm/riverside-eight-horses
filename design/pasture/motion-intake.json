@@ -1,0 +1,273 @@
+{
+  "batch": "2026-10-14-painting-walk-sleeves",
+  "new_models": [
+    "T02"
+  ],
+  "new_video_count": 8,
+  "total_video_count": 26,
+  "method": "Video-guided authored skeletal study; not motion capture",
+  "next_authoring": [],
+  "authored": [
+    {
+      "asset": "H06",
+      "clips": [
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp"
+      ],
+      "reference": "gemini_generated_video_2265f448",
+      "priority": 1,
+      "prerequisites": [
+        "shoulder/neck deformation cleanup",
+        "muzzle clearance and four-hoof support checks"
+      ],
+      "status": "three clips authored, exported and integrated; contact and seams verified; deformation polish pending",
+      "report": "artifacts/h06/graze-contact-report.json"
+    },
+    {
+      "asset": "H07",
+      "clips": [
+        "Look",
+        "Idle"
+      ],
+      "references": [
+        "gemini_generated_video_17c07da1",
+        "gemini_generated_video_f155de74"
+      ],
+      "priority": 2,
+      "prerequisites": [],
+      "status": "Idle and Look authored, exported and integrated; neutral return and hoof contacts verified",
+      "report": "artifacts/h07/motion-check.json",
+      "editable": "artifacts/h07/H07-rig-study.blend"
+    },
+    {
+      "asset": "H01",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "Painting",
+        "PaintingIdle",
+        "PaintingDown",
+        "PaintingUp"
+      ],
+      "references": [
+        "gemini_generated_video_00047139"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h01/motion-check.json",
+      "editable": "artifacts/h01/H01-rig-study.blend"
+    },
+    {
+      "asset": "H02",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "Painting",
+        "PaintingIdle",
+        "PaintingDown",
+        "PaintingUp"
+      ],
+      "references": [
+        "gemini_generated_video_aaab9a9b"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h02/motion-check.json",
+      "editable": "artifacts/h02/H02-rig-study.blend"
+    },
+    {
+      "asset": "H03",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "Look"
+      ],
+      "references": [
+        "gemini_generated_video_76de8d3b",
+        "gemini_generated_video_950383ab"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h03/motion-check.json",
+      "editable": "artifacts/h03/H03-rig-study.blend"
+    },
+    {
+      "asset": "H04",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze",
+        "Walk"
+      ],
+      "references": [
+        "gemini_generated_video_c8ebd62b",
+        "gemini_generated_video_3e726afb"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h04/motion-check.json",
+      "editable": "artifacts/h04/H04-rig-study.blend"
+    },
+    {
+      "asset": "H05",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze"
+      ],
+      "references": [
+        "gemini_generated_video_fc893e1d",
+        "gemini_generated_video_3b56819c"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h05/motion-check.json",
+      "editable": "artifacts/h05/H05-rig-study.blend"
+    },
+    {
+      "asset": "H08",
+      "clips": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze"
+      ],
+      "references": [
+        "gemini_generated_video_983f5252",
+        "gemini_generated_video_df7c0ebc"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/h08/motion-check.json",
+      "editable": "artifacts/h08/H08-rig-study.blend"
+    },
+    {
+      "asset": "P01",
+      "clips": [
+        "APose",
+        "Neutral",
+        "Idle",
+        "Look"
+      ],
+      "references": [
+        "gemini_generated_video_8f3f59dd"
+      ],
+      "referenceCaveat": "H03/H04 brown-horse identities and H05 assignments remain candidates; references guide timing only, actor anatomy comes from its own model.",
+      "status": "independent skeletal study exported and integrated; art approval pending",
+      "report": "artifacts/p01/motion-check.json",
+      "editable": "artifacts/p01/P01-rig-study.blend"
+    }
+  ],
+  "runtime_clips": [
+    "H06:Idle",
+    "H06:GrazeDown",
+    "H06:GrazeLoop",
+    "H06:GrazeUp",
+    "H07:Idle",
+    "H07:Look",
+    "H01:PaintingIdle",
+    "H02:PaintingIdle",
+    "H03:Idle",
+    "H03:Look",
+    "H04:Idle",
+    "H04:GrazeDown",
+    "H04:GrazeLoop",
+    "H04:GrazeUp",
+    "H05:Idle",
+    "H05:GrazeDown",
+    "H05:GrazeLoop",
+    "H05:GrazeUp",
+    "H08:Idle",
+    "H08:GrazeDown",
+    "H08:GrazeLoop",
+    "H08:GrazeUp",
+    "P01:Idle",
+    "P01:Look"
+  ],
+  "review_stage_clips": [
+    "H06:Idle",
+    "H06:GrazeDown",
+    "H06:GrazeLoop",
+    "H06:GrazeUp",
+    "H06:Walk",
+    "H06:Neutral",
+    "H06:HeadReturn",
+    "H06:Graze",
+    "H07:Neutral",
+    "H07:Idle",
+    "H07:Look",
+    "H01:Neutral",
+    "H01:Idle",
+    "H01:Painting",
+    "H01:PaintingIdle",
+    "H01:PaintingDown",
+    "H01:PaintingUp",
+    "H02:Neutral",
+    "H02:Idle",
+    "H02:Painting",
+    "H02:PaintingIdle",
+    "H02:PaintingDown",
+    "H02:PaintingUp",
+    "H03:Neutral",
+    "H03:Idle",
+    "H03:Look",
+    "H04:Neutral",
+    "H04:Idle",
+    "H04:GrazeDown",
+    "H04:GrazeLoop",
+    "H04:GrazeUp",
+    "H04:Graze",
+    "H04:Walk",
+    "H05:Neutral",
+    "H05:Idle",
+    "H05:GrazeDown",
+    "H05:GrazeLoop",
+    "H05:GrazeUp",
+    "H05:Graze",
+    "H08:Neutral",
+    "H08:Idle",
+    "H08:GrazeDown",
+    "H08:GrazeLoop",
+    "H08:GrazeUp",
+    "H08:Graze",
+    "P01:APose",
+    "P01:Neutral",
+    "P01:Idle",
+    "P01:Look"
+  ],
+  "h06_neutral_fix": {
+    "report": "artifacts/h06/neutral-motion-report.json",
+    "changes": [
+      "explicit forward-facing neutral and source-to-neutral HeadReturn",
+      "visible Idle head, ear and tail motion",
+      "Walk and Graze based on corrected neutral",
+      "complete 8-second Graze preview"
+    ]
+  },
+  "pending": [
+    "final art approval and manual deformation retopology",
+    "unrestricted navigation and obstacle avoidance beyond the authored routes",
+    "P01 individual fingers and physical cloth simulation"
+  ],
+  "riverWalk": {
+    "actors": [
+      "H04",
+      "H06"
+    ],
+    "mode": "user-triggered bounded shoreline paths with preparation, gait, foot locking and arrival",
+    "distancesMeters": {
+      "H04": 1.05,
+      "H06": 1.2
+    },
+    "report": "artifacts/continuation-v10/check-report.json"
+  }
+}

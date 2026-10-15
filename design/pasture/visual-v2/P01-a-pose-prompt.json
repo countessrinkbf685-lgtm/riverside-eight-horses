@@ -1,0 +1,13 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "identity-preserve",
+  "id": "P01-A",
+  "file": "images/P01-herder-a-pose.png",
+  "prompt": "Use case: identity-preserve. Asset type: one isolated full-body FRONT A-POSE character reference for 3D modeling and rigging. Image 1 is the EDIT TARGET and PRIMARY identity/costume reference: the existing blue-robed adult East Asian male herder. Image 2 is supporting original painting context ONLY for costume identity; do not include the horse or landscape. Repose the SAME man from image 1 into a clear symmetrical neutral A-pose, viewed straight from the FRONT at chest-level, near-orthographic with no three-quarter turn. Head upright looking directly forward, neutral expression, torso and hips facing front, shoulders level, weight evenly distributed. Both arms extended diagonally down and outward at approximately 40 degrees away from the vertical torso, elbows almost straight with a slight natural bend, wrists neutral. BOTH hands fully outside the sleeves and clearly separated from the robe silhouette, fingers relaxed and individually readable with slight spacing, palms oriented mostly forward. Legs straight, feet approximately shoulder-width apart with a visible gap, boots forward and soles on the same level. Preserve his adult facial identity, moustache and subtle chin hair, dark charcoal wrapped headcloth, faded blue-gray cross-front loose robe, matching waist tie, off-white undergarment and loose pale trousers, dark worn soft boots, and the same restrained sheathed waist accessory on his left hip (viewer right). Keep realistic garment construction and weight; adapt folds naturally to raised arms. Preserve costume asymmetries but make body pose symmetrical. Full figure from top of headwrap to both boot soles, uncropped, generous margins especially around hands; centered single character. Soft even neutral diffuse studio lighting, plain opaque light gray seamless background with a very faint ground contact shadow. Same realistic material and anatomy style as image 1, clear moderately detailed cloth and skin, modeling-friendly silhouette. No horse, environment, additional person, additional prop, weapon in hands, dramatic lighting, perspective foreshortening, text, labels, border, multi-view sheet, or watermark. A-pose only, not T-pose and not relaxed arms hanging beside the body.",
+  "references": [
+    "../visual-v1/images/P01-herder.png",
+    "../../../detail_herder.jpg"
+  ],
+  "source": "C:/Users/Admin/.codex/generated_images/01a13065-6b8c-7a81-b8a6-89203d98e240/exec-d0223843-3a85-42b7-9cd5-1c5d29a6758c.png",
+  "review": "正面全身 A-pose；双臂向外下方展开，双手与衣袍分离，双脚分开，保留原单件的服装与配色。作为建模姿态补充，原场景站姿参考继续保留。"
+}

@@ -1,0 +1,61 @@
+# Dependencies & Package Managers
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs & Bundles
+dist/
+dist-ssr/
+*.local
+
+# Cache & Dev Server
+.vite/
+.cache/
+.eslintcache
+.turbo/
+
+# Heavy Runtime Artifacts & Video Generation Promos
+artifacts/
+design/pasture/*.mp4
+design/pasture/heder-veo/
+*.mp4
+*.webm
+*.avi
+*.mov
+
+# Large Raw 3D Assets (Uncompressed >900MB raw exports)
+# Note: Optimized, web-ready 3D models (<28MB total) are tracked under public/models/
+design/pasture/*.glb
+
+# Raw Image Tiles & Uncompressed Master PNG (>20MB)
+# Note: Reconstructed high-resolution JPG is tracked in the repository
+tiles_level13/
+郎世宁_郊原牧马图卷_6882x2160.png
+
+# Temporary Research Crops & Local Scratch
+crop_*.jpg
+seal_*.jpg
+detail_signature.jpg
+page.html
+
+# Logs & Diagnostics
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Configurations
+.env
+.env.*
+!.env.example
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

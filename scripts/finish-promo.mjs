@@ -1,0 +1,21 @@
+import {spawnSync} from 'node:child_process';
+import {readFile,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const dir='artifacts/promo-v1',movie=`${dir}/riverside-pasture-promo-1080p.mp4`;
+function run(command,args){const result=spawnSync(command,args,{encoding:'utf8',windowsHide:true,maxBuffer:8*1024*1024});if(result.error)throw result.error;if(result.status!==0)throw new Error(result.stderr);return result;}
+const recording=JSON.parse(await readFile(`${dir}/recording-report.json`,'utf8'));
+assert.equal(recording.passed,true);assert.equal(recording.frames,1152);
+const mix=run('ffmpeg',['-hide_banner','-y','-i',`${dir}/riverside-pasture-picture.mp4`,'-i',`${dir}/original-ambience.wav`,'-map','0:v:0','-map','1:a:0','-c:v','copy','-af','loudnorm=I=-20:TP=-2:LRA=8:print_format=json','-c:a','aac','-b:a','192k','-ar','48000','-t','48','-movflags','+faststart','-metadata','title=沿水岸牧马','-metadata','comment=WebGPU scene capture; original synthesized pentatonic plucks, water and wind.',movie]);
+await writeFile(`${dir}/audio-mix-log.txt`,mix.stderr);
+const info=JSON.parse(run('ffprobe',['-v','error','-count_frames','-show_entries','stream=codec_name,codec_type,width,height,avg_frame_rate,nb_read_frames,sample_rate,channels,duration','-show_entries','format=duration,size','-of','json',movie]).stdout);
+const video=info.streams.find(s=>s.codec_type==='video'),audio=info.streams.find(s=>s.codec_type==='audio');
+assert.equal(video.width,1920);assert.equal(video.height,1080);assert.equal(video.avg_frame_rate,'24/1');assert.equal(Number(video.nb_read_frames),1152);assert.equal(Number(info.format.duration),48);assert.equal(audio.channels,2);assert.equal(audio.sample_rate,'48000');
+run('ffmpeg',['-v','error','-i',movie,'-f','null','-']);
+run('ffmpeg',['-v','error','-y','-ss','3','-i',movie,'-frames:v','1','-update','1',`${dir}/cover.jpg`]);
+const select='select='+Array.from({length:8},(_,i)=>`eq(n\\,${72+i*144})`).join('+')+',scale=640:360,tile=2x4';
+run('ffmpeg',['-v','error','-y','-i',movie,'-vf',select,'-frames:v','1','-update','1',`${dir}/final-storyboard.jpg`]);
+await writeFile(`${dir}/delivery-report.json`,JSON.stringify({passed:true,file:movie,...info,checks:['all 1152 frames decoded','1080p 24 fps 48 seconds','stereo AAC 48 kHz','no WebGPU console errors during recording','eight final-video frames extracted for visual review'],recording:'recording-report.json',audio:'original synthesized soundscape'},null,2));
+const share=`${dir}/riverside-pasture-promo-share.mp4`;
+run('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',movie,'-vf','scale=in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709','-c:v','libx264','-preset','slow','-b:v','8M','-maxrate','10M','-bufsize','16M','-pix_fmt','yuv420p','-color_range','tv','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-c:a','copy','-movflags','+faststart',share]);
+run('ffmpeg',['-v','error','-i',share,'-f','null','-']);
+console.log(JSON.stringify(info,null,2));

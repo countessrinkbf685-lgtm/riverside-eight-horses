@@ -1,0 +1,49 @@
+沿水岸牧马 · 原画屈肢姿势、沿岸慢行与衣袖精修 · 2026-10-14
+
+H01 / H02 原画定姿
+依据原画左下局部，分别制作深俯身侧卷头部的白马、后肢支撑前肢折起的黑马。
+H01 调整为 140 度朝向与较靠后的空间位置，使身体产生透视缩短，吻部侧卷回身侧。
+增加 Painting、PaintingIdle、PaintingDown、PaintingUp 四个片段；下俯与起身各 3.2 秒。
+主场景保留 PaintingIdle，不反复起身；单体检查页可检查完整过渡。
+下俯时先收蹄再降低胸部，对实际蹄壳进行地面约束，修正了过渡中前蹄穿地的问题。
+后蹄保持支撑；检查页不再把折起的前蹄误报为支撑脚。
+同时修正悬垂尾部混入骨盆/后腿权重形成的拉片，并让尾根随俯身逐渐弯曲。
+原画中相互遮挡的肢体按关节结构补全；这是从二维原画重建的姿态，不代表被遮挡部分有唯一三维答案。
+
+沿岸慢行
+场景增加“沿岸慢行”按钮，启动 H04 与 H06 两条短路径。
+H04 约向左前移 1.05 m，H06 约向右前移 1.20 m；路径带轻微横向弯曲，保持在近岸草地内。
+开始时用 2 秒从当前姿态过渡，采食状态也能抬头后行走。H06 稍后起步，避免同步。
+采用四拍步序、世界坐标落脚点和逐肢逆运动学。摆动期抬蹄，支撑期锁定脚点。
+地形法线决定蹄面朝向，实际蹄壳顶点参与落地高度拟合，起步与停步根速度连续。
+末端完成剩余落脚后站定。动态暂停和原画对照同时停止行走；“重置构图”返回初始站位。
+这是两条编排好的短路径，未引入无限循环游走、自由导航或群体避障系统。
+H06 的 GLB、原有骨架、动作与尾毛资产保留；地形行走在运行时叠加。
+
+牧马人近景
+由 22 根控制骨增加为 26 根，新增 SleeveL/R 与 CuffL/R。
+袖口与手、躯干权重分离，袖筒保持较完整截面；肘部轻屈约 9 度，使手离开衣身。
+保留 APose、Neutral、Idle、Look，并在动作检查页增加“衣袖近景”。
+当前为骨骼驱动衣料；没有宣称完成布料物理模拟或独立手指绑定。
+
+复现与交付
+Blender --factory-startup -b -t 4 --python scripts/rig-cast.py -- H01
+分别替换 H02 / P01，再执行 node scripts/pack-cast.mjs H01 H02 P01。
+node scripts/update-cast-status.mjs；node scripts/write-asset-registry.mjs。
+新增验证：npm run check:continuation。
+编辑文件：artifacts/h01/H01-rig-study.blend、artifacts/h02/H02-rig-study.blend、artifacts/p01/P01-rig-study.blend。
+运行逻辑：src/pasture/river-walk.js；新增图像与数据：artifacts/continuation-v10/。
+检查报告：artifacts/continuation-v10/check-report.json；行走数据：walk-check.json。
+
+验证范围
+在导出的 WebGPU 网格上检查两匹马定姿、下俯、起身的整网格离地高度，及后蹄支撑、动作衔接。
+在实际场景检查原画定姿的地形接触；以 30 Hz 检查两条完整行走、准备与停步阶段。
+检查行走的脚底高度、支撑漂移、抬脚幅度、起步突变、关节可达性、岸线距离与全局暂停。
+截图覆盖屈肢前/侧面、双马场景、两个行走视角及牧马人 A Pose / Neutral / Idle / Look 衣袖近景。
+
+本轮验证结果
+npm test（8 项）、npm run build、check:continuation、check:cast、check:motion、check:neutral、check:graze、check:h07、check:realism、check:browser 均通过。
+H01/H02 定姿、下俯、起身整网格最低高度仅有浮点级误差；过渡端点差异小于 0.002 mm。
+H04 行走支撑脚地形误差最大约 6.43 mm，H06 约 9.72 mm；支撑期最大漂移约 0.37 mm。
+两条路径均未出现关节不可达；起步时从当前网格到行走准备的最大差异小于 3.6 mm。
+H06/H07 原有动作、柳冠及 H06 尾毛回归通过，暂停、重置构图、移动端与无 GPU 回退通过。

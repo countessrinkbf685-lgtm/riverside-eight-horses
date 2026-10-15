@@ -1,0 +1,28 @@
+沿水岸牧马 · 柳枝与 H06 马尾结构迭代
+
+判断
+柳枝原先等距、等粗、同方向，叶片过宽；马尾为实心网格附毛发纹理。仅调颜色或提高摆幅不能解决轮廓问题。
+采用 Blender 资产编辑与 WebGPU 实时变形配合。Blender 毛发/曲线模拟不直接作为网页运行格式。
+
+柳枝
+从实际 T01 树皮表面选 32 个枝条连接点，重建主枝、侧枝、不等长垂梢和局部分叉。
+主枝逐级收细，窄长叶片带折面、弯曲和交替排列。枝根风动权重为零，枝叶共享相位和继承权重。
+当前 1,576 条垂梢、39,289 片叶；合计 569,298 三角面、两个网格绘制对象。
+运行生成器：src/pasture/willow.js。
+可编辑 Blender 快照：artifacts/realism-v1/T01-willow-refinement.blend。
+导出快照：artifacts/realism-v1/willow-branches.glb。
+快照包含规范化树干及独立枝叶网格；Blender 中后续手工修改不会自动反写程序生成器，需重新导出并接入。当前风动在 WebGPU 执行。
+
+马尾
+本轮针对 H06：在 Blender 脚本中切除旧尾下段，保留并渐细尾根过渡，新增 480 束不同长短的弯曲毛束（160 主束、320 细束），尾梢渐细。
+独立毛束网格 30,720 三角面，一个材质；颜色沿毛束变化，避免透明毛片排序问题。
+沿 7 节尾骨分配平滑权重，并加入根部小、尾梢大且略有延迟的摆动。Idle、Walk、GrazeLoop 均已测量导出网格的真实变形。
+可编辑文件：artifacts/h06/H06-rig-study.blend；生成器：scripts/groom-h06.py，由 scripts/rig-h06.py 调用。
+原始 GLB 未改动。其他七匹马仍使用各自原始静态马尾，不能直接复制 H06 尾根和权重。
+
+验证
+npm test；npm run build；npm run check:motion；npm run check:neutral；npm run check:graze；npm run check:realism；npm run check:browser。
+局部结果：artifacts/realism-v1/check-report.json。
+截图：artifacts/realism-v1/scene-desktop.png、scene-willow.png、tail-close.png。
+马尾抽样检查覆盖三个循环，每轮 61 个时刻、每时刻 1,610 个导出毛束顶点；平地尾梢最低约 2.2 厘米，无循环位置跳变。非逐毛碰撞模拟。
+仍需美术精修的地方：柳冠整体疏密与自然不规则轮廓、毛束根部融合和更细的毛发高光。该版本不宣称照片级写实或 60 FPS 性能验收。

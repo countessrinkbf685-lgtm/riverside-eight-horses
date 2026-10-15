@@ -1,0 +1,537 @@
+{
+  "version": 6,
+  "assets": [
+    {
+      "id": "H01",
+      "name": "左前白马",
+      "file": "f762da34b4eda8b4634b365bdb7789e9",
+      "height": 2.02,
+      "nativeHeading": 180,
+      "note": "深俯身、前肢折起与侧转头部的原画定姿已接入；含下俯、起身与定姿微动。",
+      "source": "design/pasture/f762da34b4eda8b4634b365bdb7789e9.glb",
+      "url": "/models/h01/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 180 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1338596,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.001619267975911498
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "Painting",
+        "PaintingIdle",
+        "PaintingDown",
+        "PaintingUp"
+      ],
+      "staticPreparedUrl": "/models/prepared/f762da34b4eda8b4634b365bdb7789e9.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h01/motion-check.json",
+      "editable": "artifacts/h01/H01-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending",
+      "refinementReport": "artifacts/continuation-v10/check-report.json"
+    },
+    {
+      "id": "H02",
+      "name": "左前黑马",
+      "file": "c8300826a850f79c70568d28071611ac",
+      "height": 1.99,
+      "nativeHeading": 180,
+      "note": "后肢支撑、前肢折起的原画定姿已接入；含下俯、起身与定姿微动。",
+      "source": "design/pasture/c8300826a850f79c70568d28071611ac.glb",
+      "url": "/models/h02/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 180 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1382520,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.001219338970258832
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "Painting",
+        "PaintingIdle",
+        "PaintingDown",
+        "PaintingUp"
+      ],
+      "staticPreparedUrl": "/models/prepared/c8300826a850f79c70568d28071611ac.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h02/motion-check.json",
+      "editable": "artifacts/h02/H02-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending",
+      "refinementReport": "artifacts/continuation-v10/check-report.json"
+    },
+    {
+      "id": "H03",
+      "name": "后排深栗马",
+      "file": "3bc8e5070909a4ea21e1499a1b0fa23a",
+      "height": 2.04,
+      "nativeHeading": 225,
+      "note": "独立骨骼、待机与回望回正已接入。",
+      "source": "design/pasture/3bc8e5070909a4ea21e1499a1b0fa23a.glb",
+      "url": "/models/h03/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 225 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1263196,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.003009858075529337
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "Look"
+      ],
+      "staticPreparedUrl": "/models/prepared/3bc8e5070909a4ea21e1499a1b0fa23a.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h03/motion-check.json",
+      "editable": "artifacts/h03/H03-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending"
+    },
+    {
+      "id": "H04",
+      "name": "中左黄褐马",
+      "file": "790713a9a1d25ea89c328cd778ca25c4",
+      "height": 2.03,
+      "nativeHeading": 180,
+      "note": "独立骨骼、待机、采食及抬头回正已接入。",
+      "source": "design/pasture/790713a9a1d25ea89c328cd778ca25c4.glb",
+      "url": "/models/h04/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 180 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1426248,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.0018909426871687174
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze",
+        "Walk"
+      ],
+      "staticPreparedUrl": "/models/prepared/790713a9a1d25ea89c328cd778ca25c4.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h04/motion-check.json",
+      "editable": "artifacts/h04/H04-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending",
+      "riverWalk": {
+        "mode": "bounded route with terrain foot locking and start/stop",
+        "report": "artifacts/continuation-v10/walk-check.json"
+      }
+    },
+    {
+      "id": "H05",
+      "name": "中左白马",
+      "file": "18e4c958a344809f7ebf4b40f3c724b8",
+      "height": 2.01,
+      "nativeHeading": 0,
+      "note": "独立骨骼、偏头校正、待机与采食回正已接入。",
+      "source": "design/pasture/18e4c958a344809f7ebf4b40f3c724b8.glb",
+      "url": "/models/h05/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 0 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1385344,
+      "meshes": [
+        {
+          "originalTriangles": 1500038,
+          "triangles": 20000,
+          "error": 0.002340945415198803
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze"
+      ],
+      "staticPreparedUrl": "/models/prepared/18e4c958a344809f7ebf4b40f3c724b8.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h05/motion-check.json",
+      "editable": "artifacts/h05/H05-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending"
+    },
+    {
+      "id": "H06",
+      "name": "柳左灰白马",
+      "file": "48825d13227c2967f8302b18fe1ea6b5",
+      "height": 2.02,
+      "nativeHeading": 0,
+      "note": "46 骨骼绑定样片；正向中立姿态、可见待机与低头采食回正序列已接入。慢走在独立平地检查页验证，沿岸慢行可启动短路径与逐蹄地形接触。",
+      "source": "design/pasture/48825d13227c2967f8302b18fe1ea6b5.glb",
+      "url": "/models/h06/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "46_bone_deformation_study_Idle_and_Graze_in_scene_Walk_on_flat_review_stage",
+      "normalization": "Preserve GLB root rotation; uniform height scaling and XZ centering; native heading calibrated per asset.",
+      "bytes": 6343988,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.0017597655532881618
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Idle",
+        "Walk",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Neutral",
+        "HeadReturn",
+        "Graze"
+      ],
+      "staticPreparedUrl": "/models/prepared/48825d13227c2967f8302b18fe1ea6b5.glb",
+      "animationReport": "artifacts/h06/rig-report.json",
+      "editable": "artifacts/h06/H06-rig-study.blend",
+      "topology": "derived triangles, not manual deformation retopology",
+      "tailGroom": {
+        "strands": 720,
+        "broadStrands": 240,
+        "fineStrands": 480,
+        "triangles": 57600,
+        "removedSourceTailVertices": 1458,
+        "reshapedSleeveVertices": 357,
+        "protectedBodyVertices": 13440,
+        "maxSleeveShiftMeters": 0.11809780657765505,
+        "method": "measured hair-cap guides, surface-fitted outer locks, continuous root-to-tip colour; original upper dock retained and lower hidden rim tapered; 7 tail-bone weights; source unchanged"
+      },
+      "groomReport": "artifacts/realism-v3/check-report.json",
+      "riverWalk": {
+        "mode": "bounded route with terrain foot locking and start/stop",
+        "report": "artifacts/continuation-v10/walk-check.json"
+      }
+    },
+    {
+      "id": "H07",
+      "name": "柳旁浅褐马",
+      "file": "eb5ef92187918f4a7fde0f5673ad8e64",
+      "height": 1.96,
+      "nativeHeading": 90,
+      "note": "36 骨骼独立绑定；待机、耳动、尾动与回望回正已接入。保持四蹄站定。",
+      "source": "design/pasture/eb5ef92187918f4a7fde0f5673ad8e64.glb",
+      "url": "/models/h07/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "36_bone_deformation_study_Idle_and_Look_in_scene",
+      "normalization": "Rig authoring rotates source +90 degrees around Blender Z to canonical +X; runtime heading 0 replaces static native heading 90, uniform height and XZ centering retained.",
+      "bytes": 1366608,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.0024053165689110756
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "Look"
+      ],
+      "staticPreparedUrl": "/models/prepared/eb5ef92187918f4a7fde0f5673ad8e64.glb",
+      "animationReport": "artifacts/h07/motion-check.json",
+      "editable": "artifacts/h07/H07-rig-study.blend",
+      "topology": "derived triangles, not manual deformation retopology",
+      "runtimeHeading": 0
+    },
+    {
+      "id": "H08",
+      "name": "牧者旁棕白花马",
+      "file": "c64197c464cf6152b30f59e5c517f345",
+      "height": 1.98,
+      "nativeHeading": 180,
+      "note": "独立骨骼、待机与采食回正已接入，保留棕白花斑。",
+      "source": "design/pasture/c64197c464cf6152b30f59e5c517f345.glb",
+      "url": "/models/h08/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 180 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1325432,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.0013808815274387598
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "Neutral",
+        "Idle",
+        "GrazeDown",
+        "GrazeLoop",
+        "GrazeUp",
+        "Graze"
+      ],
+      "staticPreparedUrl": "/models/prepared/c64197c464cf6152b30f59e5c517f345.glb",
+      "bones": 36,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/h08/motion-check.json",
+      "editable": "artifacts/h08/H08-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending"
+    },
+    {
+      "id": "P01",
+      "name": "蓝衣牧者",
+      "file": "e214feb3da6e59bf44a6fd83a77916a7",
+      "height": 1.72,
+      "nativeHeading": 90,
+      "note": "人形骨骼、A Pose、自然垂手、待机与左右观察已接入；袖口独立控制及肘部变形已精修；手指仍为源模型整体结构。",
+      "source": "design/pasture/e214feb3da6e59bf44a6fd83a77916a7.glb",
+      "url": "/models/p01/horse.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "independent_rig_video_referenced_authored_clips",
+      "normalization": "Source rotated 90 degrees to canonical +X; uniform height and floor alignment retained.",
+      "bytes": 1487020,
+      "meshes": [
+        {
+          "originalTriangles": 1499524,
+          "triangles": 20000,
+          "error": 0.006327577866613865
+        }
+      ],
+      "skins": 1,
+      "animations": [
+        "APose",
+        "Neutral",
+        "Idle",
+        "Look"
+      ],
+      "staticPreparedUrl": "/models/prepared/e214feb3da6e59bf44a6fd83a77916a7.glb",
+      "bones": 26,
+      "runtimeHeading": 0,
+      "animationReport": "artifacts/p01/motion-check.json",
+      "editable": "artifacts/p01/P01-rig-study.blend",
+      "topology": "derived triangle deformation study; art cleanup and retopology pending",
+      "refinementReport": "artifacts/continuation-v10/check-report.json"
+    },
+    {
+      "id": "T01",
+      "name": "主柳树干",
+      "file": "0d2e3526350332ae1efe54590e2a4bbd",
+      "height": 7.3,
+      "nativeHeading": 0,
+      "note": "原始树干与新增程序柳枝分开，枝叶为首轮搭建。",
+      "source": "design/pasture/0d2e3526350332ae1efe54590e2a4bbd.glb",
+      "url": "/models/prepared/0d2e3526350332ae1efe54590e2a4bbd.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "static_prepared_not_retopologized_or_rigged",
+      "normalization": "Preserve GLB root rotation; uniform height scaling and XZ centering; native heading calibrated per asset.",
+      "bytes": 1484860,
+      "meshes": [
+        {
+          "originalTriangles": 1499684,
+          "triangles": 26076,
+          "error": 0.007811727002263069
+        }
+      ],
+      "skins": 0,
+      "animations": 0,
+      "editable": "artifacts/realism-v3/T01-willow-refinement.blend",
+      "foliageReport": "artifacts/realism-v3/willow-report.json"
+    },
+    {
+      "id": "T02",
+      "name": "左侧杂木枝干",
+      "file": "83c204b4c4421c915f097c40b3dd0934",
+      "height": 6.6,
+      "nativeHeading": 0,
+      "note": "已接入新枝干模型；秋色叶簇单独生成并附着于树枝表面，原始无叶模型保持独立。",
+      "source": "design/pasture/83c204b4c4421c915f097c40b3dd0934.glb",
+      "url": "/models/prepared/83c204b4c4421c915f097c40b3dd0934.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "imported_bare_branch_model_with_separate_surface_attached_foliage",
+      "normalization": "Preserve source root transform; uniform height scaling; XZ pivot centered on the lower stem, not asymmetric crown.",
+      "bytes": 1419812,
+      "meshes": [
+        {
+          "originalTriangles": 1499988,
+          "triangles": 29604,
+          "error": 0.007810893468558788
+        }
+      ],
+      "skins": 0,
+      "animations": 0,
+      "sceneInstances": 2,
+      "attachmentReport": "artifacts/t02/runtime-report.json"
+    },
+    {
+      "id": "R01",
+      "name": "低矮坡石",
+      "file": "6c59e2c0e6864b03bf7b1e5fe611b266",
+      "height": 0.55,
+      "nativeHeading": 0,
+      "note": "单块重复装配，后续需补充轮廓变体。",
+      "source": "design/pasture/6c59e2c0e6864b03bf7b1e5fe611b266.glb",
+      "url": "/models/prepared/6c59e2c0e6864b03bf7b1e5fe611b266.glb",
+      "sourceUnmodified": true,
+      "identityReview": "Compared front/three-quarter model renders against approved single-item images; visual mapping, not embedded source metadata.",
+      "assetStage": "static_prepared_not_retopologized_or_rigged",
+      "normalization": "Preserve GLB root rotation; uniform height scaling and XZ centering; native heading calibrated per asset.",
+      "bytes": 1214680,
+      "meshes": [
+        {
+          "originalTriangles": 1500000,
+          "triangles": 20000,
+          "error": 0.0056915502063930035
+        }
+      ],
+      "skins": 0,
+      "animations": 0
+    }
+  ],
+  "missing": [
+    "deformation art approval and retopology",
+    "unrestricted herd navigation beyond authored short paths",
+    "P01 fingers and physical cloth"
+  ],
+  "totals": {
+    "runtimeModelBytes": 21438304,
+    "staticPreparedBytes": 12162288,
+    "uniqueTriangles": 255680
+  },
+  "h06FlatPlaneContacts": {
+    "Idle": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.0028675806242972612,
+      "maxSupportDriftMeters": 6.07850493620966e-7,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "Walk": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.0028678274247795343,
+      "maxSupportDriftMeters": 7.668107885315462e-7,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "GrazeDown": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "GrazeLoop": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "GrazeUp": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "Neutral": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "HeadReturn": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    },
+    "Graze": {
+      "measured": "evaluated skinned sole vertices, flat plane, constant root speed for Walk",
+      "maxSoleHeightMeters": 0.002867003669962287,
+      "maxSupportDriftMeters": 0,
+      "soleVertexCounts": {
+        "HL": 48,
+        "FL": 36,
+        "HR": 32,
+        "FR": 46
+      },
+      "passed": true
+    }
+  }
+}

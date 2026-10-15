@@ -1,0 +1,160 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-13",
+  "records": [
+    {
+      "id": "C00",
+      "file": "00-atmosphere.png",
+      "prompt": "Use case: stylized-concept. Asset type: panoramic art-direction keyframe for a WebGPU 3D reconstruction of Giuseppe Castiglione's Chinese horse pasture handscroll. Input image 1 is the authoritative composition and color reference, not a texture to paste on a plane. Generate one refined wide panoramic concept image, about 3:1 aspect. Preserve its exact overall arrangement and exactly EIGHT horses plus ONE blue-robed herder: the low-headed white horse and bending black horse overlapping at far left foreground; behind them one rear-facing dark chestnut, one left-facing ochre-brown horse, one lowered-head white horse; near center a right-facing dapple gray horse; just left of the huge willow trunk a frontal light dun horse; at right one grazing chestnut-and-white pinto beside the single herder. Keep the dominant leaning ancient willow at roughly 64% image width, its long sparse drooping branches arching over the middle; rugged low ochre rocks and sparse autumn plants at left, shallow uneven earth and sparse grasses foreground. Upper half quiet misty warm gray-beige distance with restrained blue-gray atmospheric layers, no invented lake, no mountains or buildings. Style: sophisticated believable 3D game environment rendered with delicate Chinese court-painting color, subtle brush detail, soft physically plausible volume, warm ochre earth, muted gray-green willow leaves, restrained autumn red leaves at far left. Calm broad diffuse daylight, soft contact shadows, no dramatic sunset, no shafts or excessive fog. Preserve the intimacy and flat panoramic rhythm while adding modest spatial depth and sculptural anatomy. No silk weave or crack texture baked on subjects, no sepia filter smothering white horses, no text, no labels, no UI, no frames, no additional animals or people. Entire composition comfortably inside image with no missing herder. This is the final atmosphere concept, not a technical layout sheet.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-3b44fc76-f03b-4f20-96f7-d0db4f2ccaea.png"
+    },
+    {
+      "id": "H06",
+      "file": "H06-gray-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE isolated horse reference for image-to-3D modelling, H06. Input image is a painting crop used ONLY for the horse's identity, body silhouette and visible markings. Make a believable living adult gray-white horse matching its compact rounded barrel, medium-short strong legs, gentle head, gray mottled/dappled hindquarters, darker gray lower legs, long gray-white tail with darker root, and gray mane. Unseen anatomy is a coherent reconstruction. Neutral relaxed standing quadruped pose with head at normal height, body facing right; three-quarter side view showing the same visible flank as the painting, mostly side-on with slight front visibility, long lens low distortion. EXACTLY FOUR legs and FOUR separate hooves readable in silhouette, all planted with slight fore-aft staggering; preserve clear negative space between every leg; relaxed straight spine, ears visible, closed mouth. Tail hangs with a subtle backward curve separated from hind legs. Entire animal uncropped with generous 12% margins. Soft neutral diffuse studio light on a seamless light gray background; faint contact shadow only. Natural short coat microtexture, anatomically credible equine knees, hocks and fetlocks, dark gray hooves, restrained material highlights. Not a racehorse, not oversized draft horse, not cartoon. No saddle, no tack, no person, no scenery, no floor pedestal, no labels, no multiple views, no text. Absolutely no silk canvas weave, cracks or painting substrate on the horse. The result is a neutral modeling asset, not a sepia painting.",
+      "references": [
+        "E:\\8-horses-lang\\detail_horse.jpg"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-cb7bebbc-61fd-4143-b00a-a1f880b41998.png"
+    },
+    {
+      "id": "H01",
+      "file": "H01-white-horse.png",
+      "detail": "Subject: H01 is the WHITE horse at the extreme LEFT FOREGROUND of the painting, bending its head down beside the black horse. Use ONLY this white horse, reconstruct upright standing instead of its folded painted pose. Warm ivory-white body, pale ivory mane and long full pale tail, softly gray muzzle, dark eyes, pale gray hooves. Compact sturdy rounded body and gently arched neck; no gray dapples or black patches. The camera and neutral pose must make it suitable for later rigging, not a bending or kneeling horse.",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H01 is the WHITE horse at the extreme LEFT FOREGROUND of the painting, bending its head down beside the black horse. Use ONLY this white horse, reconstruct upright standing instead of its folded painted pose. Warm ivory-white body, pale ivory mane and long full pale tail, softly gray muzzle, dark eyes, pale gray hooves. Compact sturdy rounded body and gently arched neck; no gray dapples or black patches. The camera and neutral pose must make it suitable for later rigging, not a bending or kneeling horse.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-0e4e0b4f-1623-4185-9b93-27a58fa71ba4.png"
+    },
+    {
+      "id": "H02",
+      "file": "H02-black-horse.png",
+      "detail": "Subject: H02 is the BLACK horse at the LEFT FOREGROUND overlapping the white horse. Reconstruct it STANDING in a neutral pose instead of its crouched/bending painted pose. Deep warm black-brown body, softly brown muzzle, dark mane with subtle pale strands, conspicuously long flowing ivory-white tail with dark root, small pale lower-leg markings matching the painting; no large white patches on the body. Rounded strong barrel, compact historic riding-horse anatomy, gentle head. Keep the recognizable contrast of dark body and pale tail.",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H02 is the BLACK horse at the LEFT FOREGROUND overlapping the white horse. Reconstruct it STANDING in a neutral pose instead of its crouched/bending painted pose. Deep warm black-brown body, softly brown muzzle, dark mane with subtle pale strands, conspicuously long flowing ivory-white tail with dark root, small pale lower-leg markings matching the painting; no large white patches on the body. Rounded strong barrel, compact historic riding-horse anatomy, gentle head. Keep the recognizable contrast of dark body and pale tail.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-307aac2d-8b6b-4634-805c-cc9f9a7f856d.png"
+    },
+    {
+      "id": "H03",
+      "file": "H03-chestnut-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H03 is the DARK CHESTNUT horse in the BACK ROW around 29 percent from the left of the painting, seen with its rump toward the viewer. Reconstruct that same individual in neutral standing THREE-QUARTER REAR SIDE view, head turned slightly enough to read its profile, body oriented diagonally away LEFT. Deep reddish chestnut compact rounded body, dark brown-black mane and tail, no large white patches, warm brown muzzle. Prioritize complete hindquarter structure and all four separated feet. Do not borrow the dapple gray identity of input 2. Plain opaque gray studio background, no transparency.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-82caec7f-1775-4590-b9df-1bbcaa948dc0.png"
+    },
+    {
+      "id": "H04",
+      "file": "H04-ochre-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H04 is the OCHRE GOLDEN-BROWN horse standing LEFT-FACING SIDE-ON across the middle-left group around 30 percent image width. Uniform honey-ochre/brown body with soft darker shading along back, brown mane and brown tail, slightly darker muzzle and legs, no painted dapples, no white pinto patches. Leaner and slightly longer silhouette than the gray H06, restrained compact adult riding-horse build. Keep a nearly side-on left-facing three-quarter pose. Use an opaque light-gray studio background, no transparent background.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-110be13d-90a6-46af-bf59-51a440b10e78.png"
+    },
+    {
+      "id": "H05",
+      "file": "H05-pale-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H05 is the WHITE grazing horse behind the ochre horse at about 37 percent from left in the painting, NOT the far-left curled white horse. Reconstruct its upright neutral rest stance, facing RIGHT, mostly side view. Cool pearl-white coat without patches or dapples, subtly gray skin at muzzle, pale cream-white mane and tail, long graceful neck, slightly leaner belly and longer legs than H01, restrained natural proportions. Tail extends away from the hind legs and every hoof is visible. Keep head at normal relaxed height for rigging, no grazing action in this asset. Opaque plain light gray studio background, no transparency.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-56403a8a-92bd-46f3-bac0-d3a10be55ff0.png"
+    },
+    {
+      "id": "H07",
+      "file": "H07-dun-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated neutral standing horse, production image-to-3D reference. Input image 1 is the authoritative painting for the specified horse identity; input image 2 gives ONLY studio rendering quality, neutral lighting, and plausible compact horse anatomy, NOT its gray coat. Reconstruct the specified individual as a natural adult horse, no modern show breed exaggeration. Exactly ONE horse in a neutral standing rest pose, body facing LEFT in three-quarter mostly side view, all FOUR legs and FOUR hooves separately readable, hooves planted with subtle fore-aft stagger and clear leg gaps. Head at normal relaxed height, closed mouth, ears visible, tail gently curving away from hind legs. Full ears, muzzle, hooves and entire tail uncropped with generous 12% margins. Seamless light gray studio backdrop, soft broad neutral light, very faint contact shadows. Short coat microtexture, modest sheen, realistic hocks and fetlocks. No grass, rocks, human, tack, saddle, pedestal, text, labels, multi-view sheet or extra animals. No painting weave/cracks/sepia substrate. Hidden surfaces are restrained coherent design completions. Subject: H07 is the LIGHT DUN horse immediately LEFT OF THE MAIN WILLOW TRUNK, seen nearly frontal around 59 percent from left in the original. Pale warm beige/taupe coat, slightly darker gray-brown mane and tail, pale muzzle, dark eyes, subtle pale face stripe based on the original. Compact quiet adult horse. Override the generic side pose: choose a FRONT THREE-QUARTER stance approximately 35 degrees from front, head gently toward viewer, so chest shape, both forelegs and both hindlegs are fully separately visible, no hidden fourth hoof. No dapples, no large pinto patches. Neutral rest pose not walking. Opaque plain light gray studio backdrop, no transparency.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-9366ac0e-3165-4cd8-a774-ecc6243ab1bc.png"
+    },
+    {
+      "id": "H08",
+      "file": "H08-pinto-horse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE isolated horse reference for image-to-3D, H08. Image 1 is the original painting crop: use ONLY the CHESTNUT-AND-WHITE PINTO horse's visible coat pattern, silhouette and mane/tail, excluding the herder. Image 2 is a studio quality/anatomy reference only; do not copy its gray coat. Reconstruct the same pinto in an upright relaxed neutral STANDING pose with head at normal height, facing LEFT, full-body front-left three-quarter mostly SIDE-ON so its painted flank is prominent. Preserve the large irregular ivory-white patch sweeping over the visible upper barrel from withers into midbody, its uneven chestnut islands and lower brown belly, chestnut head and rump, dark chestnut mane and dark long tail. Match pattern placement to input 1 as closely as possible; not random spotted coat, no added small polka dots or gray dapples. Compact adult horse, strong gentle neck, natural rounded barrel, short coat, anatomically believable equine joints. EXACTLY FOUR separately readable legs and hooves planted with slight staggering and visible gaps; tail separated from legs with gentle backward curve. Entire ears, hooves and tail uncropped, generous margins. Opaque seamless neutral light gray studio background, very soft diffuse neutral light, faint contact shadow. No silk weave, no cracked paper texture, no yellow wash, no rider, no person, no tack, no props, no grass, no text, no labels, no multi-view sheet. This is one neutral model input, not a recreation of the whole painting.",
+      "references": [
+        "E:\\8-horses-lang\\detail_herder.jpg",
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H06-gray-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-5d4e71a3-80ca-49f2-ae02-7d33972f189e.png"
+    },
+    {
+      "id": "H01",
+      "file": "H01-white-horse-v2.png",
+      "replaces": "H01-white-horse.png",
+      "prompt": "Use case: precise-object-edit. Input image 1 is the EDIT TARGET. Keep this exact single ivory-white horse, its face, body proportions, pale coat, four feet, mane, tail, standing pose and camera angle unchanged. Fix ONLY the defective background and edge treatment: replace every transparent/black/colored fringe area around and between the legs with a seamless OPAQUE light neutral gray studio backdrop and floor, soft even illumination and a very faint realistic contact shadow under each hoof. Restore clean natural fur and mane edges with no black, yellow or red halo, no checkerboard and no transparency. Keep full horse uncropped and centered. No text, no additional objects, no changes to horse markings or anatomy. Final image should be a clean neutral studio modelling reference.",
+      "references": [
+        "E:\\8-horses-lang\\design\\pasture\\visual-v1\\images\\H01-white-horse.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-f777d8f7-def4-4bb4-8cf8-05a17fe12714.png"
+    },
+    {
+      "id": "P01",
+      "file": "P01-herder.png",
+      "prompt": "Use case: historical-scene. Asset type: ONE isolated full-body character modelling reference for a Chinese court-painting WebGPU reconstruction. Input image 1 is identity, clothing and proportion reference for ONLY THE MAN ON THE RIGHT. Reconstruct that same adult East Asian male herder as a plausible natural person, not a celebrity likeness: quiet face, small dark moustache as visible, dark hair/head wrapping following the painting, faded muted blue-gray loose cross-front outer robe tied at waist, off-white lower garment and pale loose trousers, dark soft boots, simple brown belt and restrained hanging sheath/accessory only as visible in painting. No horse, no weapon held, no new hat or fanciful armor. Neutral standing modelling pose, feet slightly apart, arms relaxed slightly AWAY from torso to reveal sleeve and body separation, empty hands fully visible and separate. Three-quarter front view, head and body aligned, full head/hair through both boot soles uncropped, generous margins. Soft neutral diffuse studio light, opaque seamless light gray background, faint contact shadow. Realistic cloth weight and folds, no ornate embroidery, no glossy fabric, muted historically compatible clothing. Preserve the painted costume silhouette without copying silk weave or cracks onto surfaces. Single human only, no props added, no labels or text, no multi-view sheet. Unseen clothing construction is a restrained design completion.",
+      "references": [
+        "E:\\8-horses-lang\\detail_herder.jpg"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-c5ce47ea-3438-4f91-9e42-5e4aa4f34f37.png"
+    },
+    {
+      "id": "T01",
+      "file": "T01-willow-trunk.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: single isolated ancient willow trunk and major branch skeleton for image-to-3D environment modelling. Image 1 is the original handscroll; study ONLY the dominant willow centered at about 64 percent width. Preserve its asymmetric leaning sinuous trunk, strongly twisted diagonal bark ridges, broad flared exposed roots, heavy fork reaching left over the horses and the upright/right main trunk. Reconstruct one coherent complete tree trunk with 5-7 major organically tapering branches, tree height design about 8 m. This asset intentionally has NO leaves and NO curtain of fine drooping twigs: those will be separate assets. Complete roots through all major branch tips visible with substantial padding, full landscape-or-square product framing, no cut-off trunk top. Rough warm gray-brown bark with sculptural grooves, weathered cavities and restrained natural variation, no unrealistic fantasy face or polished wood. Soft broad neutral studio illumination, opaque light gray seamless backdrop, subtle contact shadow. Trunk/roots only, no ground slab, no soil island, no rocks, no grass, no horse, no human, no pot, no label, no dimensions, no text. Preserve the distinctive painted silhouette while making bark and root anatomy credible in three dimensions. Never add silk weave or painting crack texture.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-926054fb-6859-4a8e-9bc3-0ff83254751e.png"
+    },
+    {
+      "id": "V01",
+      "file": "V01-willow-bough.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE isolated willow foliage bough reference for procedural mesh/leaf-card authoring. Input image is the handscroll: use the drooping willow foliage as form/color reference. A single gently arched slender woody willow branch with about eight long hanging supple twigs of varied lengths, sparse narrow lanceolate leaves, muted olive-gray green with subtle pale ochre autumn tips. All twigs organically connected to the ONE main branch; keep airy readable negative space between hanging strands, no dense solid canopy. Show the whole branch from attachment end to every hanging tip, complete silhouette and generous margins, near-frontal view with subtle 3D depth. Soft neutral diffuse lighting on an OPAQUE seamless light gray backdrop, no hard shadow, no transparency. Natural botanical morphology with fine but clearly resolved twigs, matte thin leaves, no fuzzy clumps. No trunk, no tree roots, no scenery, no horses, no soil, no pot, no labels, no text, no silk weave. This is a single branch construction reference, not a complete tree and not a multi-item atlas. The design will be rebuilt as light controllable strands rather than assumed ready-made geometry.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-9701042d-095e-4045-8ee2-28c88a5eb72a.png"
+    },
+    {
+      "id": "R01",
+      "file": "R01-rock-ledge.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated low weathered rock ledge for image-to-3D scene modelling. Input image is the handscroll: reference the broad low angular ochre rocks at left and across the foreground, NOT the willow trunk. One coherent elongated naturally layered rock outcrop, approx design 3 m wide by 1.2 m deep by 0.8 m high, asymmetrical stepped top, broad sloping strata, broken angular edges softened by weathering, warm gray-ochre stone, dark crevices and subdued mineral speckles. Entire object in three-quarter view with top and front readable, bottom resting naturally, complete silhouette with 15% margin. Broad neutral studio light, opaque plain light gray backdrop, faint contact shadow. No ground diorama slab, no grass or bushes, no tree, no horses, no water, no scattered disconnected stones, no exaggerated cave, no text or labels or dimensions. Material physically credible matte stone; no painting weave or sepia paper coating. Prioritize original painting's flowing low horizontal rock silhouette rather than a tall mountainous boulder.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-8acd5c19-ce49-4914-bc27-e4a0bad36443.png"
+    },
+    {
+      "id": "T02",
+      "file": "T02-autumn-tree.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE isolated small asymmetrical autumn broadleaf tree reference for image-to-3D. Input image is the handscroll; use the twisted sparse vegetation on the FAR LEFT around the rocky bank for visual language, not the central willow. One small naturally gnarled multi-branch tree about 3.5 m tall design scale, a single coherent rooted trunk, angled fine branching, an airy sparse canopy with small muted olive/ochre leaves and a few restrained rust-red broad leaves in clusters. Strong asymmetric silhouette leaning gently right, visible negative space between branches, readable roots, no dense spherical foliage mass. Whole tree from roots to every crown tip uncropped with generous margin, three-quarter natural asset view. Soft neutral broad studio light, opaque seamless light gray background and faint contact shadow. No rock base, no soil slab, no pot, no grass, no horses, no human, no labels or text. Bark and leaves natural and matte, no silk/canvas weave, not a bonsai pot and not a giant willow. This is a historically styled vegetation design completion, not a claim of exact botanical species identification.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-6c8432b8-cc17-4472-9c7a-04bf72d53f80.png"
+    },
+    {
+      "id": "V02",
+      "file": "V02-grass-clump.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one isolated sparse pasture grass tuft reference for procedural low-poly foliage. Input image is the original handscroll; use the fine sparse grass around the horses' feet for color and silhouette. ONE naturally rooted compact grass clump about 35 cm tall by 45 cm wide at design scale, thin narrow tapering blades gracefully bending outward, muted sage-olive green mixed with a small amount of dry pale ochre blades, airy silhouette and visible gaps, only a few subtle fine seed heads. Readable individual blade forms, not a dense fuzzy lawn or bright neon plant. Whole clump including tiny root crown and every blade tip inside frame with generous padding. Three-quarter view at clump mid-height. Soft neutral diffuse studio lighting, opaque light gray seamless background, faint contact shadow, no transparency. No soil platform, no decorative pot, no rocks, no tree, no animals, no labels, no text, no multiple separate clumps or atlas. Realistic smooth grass leaves, no canvas weave and no broad maple leaves. Reference will be rebuilt with thin curved leaf strips and instanced, not converted into a solid blob.",
+      "references": [
+        "E:\\8-horses-lang\\郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-c7833aa4-2758-4daf-a742-7d26b727ab47.png"
+    }
+  ]
+}

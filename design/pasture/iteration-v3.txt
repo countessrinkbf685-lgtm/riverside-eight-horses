@@ -1,0 +1,65 @@
+沿水岸牧马 · 场景第三轮 / H06 动作管线
+2026-10-13
+
+查看
+主场景：/ （H06 已播放 Idle；动态开关同时暂停马、水、植物）
+动作检查：/motion-review.html （Idle / Walk、骨架开关、时间拖动、逐蹄支撑指示）
+视频归档：/design/pasture/video-prompts/index.html （18 段可打开的参考视频）
+
+场景迭代
+主柳冠向左右扩展，以垂枝覆盖上部画面；左侧程序杂木加密分枝与叶群。
+河带扩至约 6.3 米，仍从左侧延伸到画面右侧；改变水纹的连续条纹，增加碎波遮罩。
+远岸采用三层、成组的小树冠，降低同体量重复树的存在感，加入距离雾。
+草丛 6,800 组、贴地阔叶 520 组，其余岸草/蕨叶/灌木按独立种子分布；保留马匹净空。
+坡石增加竖向起伏及程序碎石，补足土坡到岩石的过渡。
+环境实例面数 656,004（另见 environment-v3.json）。未包含导入模型及阴影通道；尚未通过 60 FPS 性能验收。
+当前仍与概念图有明显差距，尤其 H01/H02 屈肢定姿、左侧杂木的枝干形态、主柳细枝连接和写实叶片材质。
+
+视频归档
+12 段马匹视频、6 段牧者视频，共 18 段。
+原始视频不改名、不覆盖；评论以原文件名为键，避免新增素材排序后错配身份。
+37037a6e：H06 待机/轻转头/摆尾，全身画幅；20 点加密抽帧。
+3ea4540b：H06 旧慢走参考；20 点加密抽帧，蹄部裁切使其无法用于完整步态验收。
+其他棕马或浅白马无法仅凭四点抽帧可靠区分时，明确保留候选身份。
+视频仅用于手工动作编排。未执行自动视频动捕，也未把所有收到的视频认定为合格动作。
+
+H06 可编辑资产与动画
+artifacts/h06/editable.glb：网页派生网格去量化、贴图转 PNG 的中间资产。
+artifacts/h06/H06-rig-study.blend：可编辑马骨架、权重、Idle / Walk 动作。
+artifacts/h06/rigged.glb：Blender 导出文件。
+public/models/h06/horse.glb：网页运行版本（46 根骨骼、20,000 三角面）。
+artifacts/h06/rig-report.json：骨架关节、脚底样本、作者侧检查结果。
+artifacts/h06/browser-contact-report.json：导出后 WebGPU 页面的实际蒙皮点检查结果。
+
+绑定方式：马体解剖区域约束 + 骨段距离权重；每点最多 4 个影响；蹄壳使用刚性权重。
+动画方式：手工程序编排，四拍顺序 HL → FL → HR → FR，2.4 秒一周期、72% 支撑期。
+检查页原地 Walk 与 0.10417 m/s 根位移同步。未启动河岸自动行走、转向、起停或避障。
+Idle 为 8 秒循环，包括小幅身体、颈头与尾部变化；场景仅接入此片段。
+当前是减面三角网格上的绑定样片，不是正式的关节重拓扑或最终变形验收。
+
+验证范围
+Blender 在每个 30 FPS 烘焙帧测量变形后的蹄底顶点。
+浏览器在每秒 60 个采样点测量实际导出的蒙皮，每动作连续检查两周期。
+浏览器平地 Walk：蹄底最大支撑高度约 3.51 mm，支撑期最大水平漂移约 0.30 mm。
+Idle：蹄底最大高度约 3.49 mm，漂移约 0.01 mm。
+采样覆盖绑定姿态最低 3.5 mm 内的蹄底顶点；测量细节以 JSON 为准。
+平地检查通过不等于斜坡接地或变形美术通过。其他马仍是静态模型。
+
+复现
+node scripts/prepare-h06.mjs
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --factory-startup -b -t 4 --python scripts/rig-h06.py
+node scripts/pack-h06.mjs
+node scripts/write-asset-registry.mjs
+node scripts/report-environment.mjs
+python scripts/audit-sources.py
+python scripts/build-video-prompts.py
+npm test
+npm run build
+npm run check:browser
+npm run check:motion
+
+接续制作重点
+1. 手工清理肩胛/肘/膝/跗关节拓扑和权重，检查所有视角的形变；把小步验证扩展成自然步幅。
+2. 制作起停、转向、非平地蹄点投射和身体平衡，再开放短程行走。
+3. 恢复 H01/H02 的画中定姿；继续对齐马群遮挡和主柳轮廓。
+4. 使用 T02 枝干参考替换杂木占位，改善柳叶轮廓、背光和枝条附着；随后做 LOD 与性能验收。

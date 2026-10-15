@@ -1,0 +1,36 @@
+沿水岸牧马 · H07 待机与回望 / 局部美术迭代
+
+本轮交付
+H07 新增 36 骨骼独立绑定，Neutral、Idle、Look 三个片段。
+主场景按 Idle 8 秒、Look 8 秒、Idle 8 秒播放；与 H06 的采食序列分别计时。
+动作检查页增加 H06 / H07 选择，支持独立片段、拖动时间、骨架、正侧面检查。
+原始 GLB 与参考视频保持不变。模型依然是衍生三角网格变形样片，尚未完成手工重拓扑。
+
+H07 制作依据
+待机参考 gemini_generated_video_f155de74：舍弃开头抬蹄，以四蹄落稳后的动作节奏制作。
+回望参考 gemini_generated_video_17c07da1：.65–2.1 秒转头、2.1–3 秒停留、3–5 秒回正、5–8 秒停稳。
+骨架按 H07 的头颈、耳、四腿、尾部重新标定。制作时将原模型旋转为 +X 前向，运行时使用对应朝向，避免二次旋转。
+动作是视频参考下手工编排的骨骼关键帧，并非视频动作捕捉。
+导出的 WebGPU 网格测量：回望约 36 度，口鼻位移约 32 厘米；Idle 口鼻往返约 5.4 厘米。
+两段动作与 Neutral 接合误差小于 0.001 米；平地蹄部最大位移约 0.043 毫米，河岸蹄底采样误差约 3.93 毫米。
+
+柳树与马尾
+柳冠主枝末端高度加入变化，上层主枝补不等长短垂梢，减轻光秃弧形骨架。
+当前 1,793 条垂梢、42,401 片叶、618,582 个枝叶三角面，仍为两个网格对象。
+H06 尾根增加 120 束由保留表面起始的短过渡毛束，长短毛合计 600 束；颜色改为连续过渡。
+未扩大原尾切除范围。尾根保留网格仍然可见，需要后续手工融合；其他马的尾部不会套用 H06 的切除规则。
+H07 使用其原有尾网格做骨骼摆动，尚未制作独立毛束。
+
+文件与检查
+artifacts/h07/H07-rig-study.blend：H07 可编辑绑定与动作。
+public/models/h07/horse.glb：压缩后的网页运行文件。
+artifacts/h07/motion-check.json：实际导出网格、四蹄、回正、循环与场景接地检查。
+artifacts/realism-v2/T01-willow-refinement.blend：柳树规范化树干、独立枝叶的可编辑快照。
+artifacts/h06/H06-rig-study.blend：H06 毛束与原有动作。
+artifacts/realism-v2/check-report.json：马尾地面间距、循环、柳枝风动属性检查。
+柳树 Blender 文件为快照，手工修改后需要重新导出接入；运行中的风动仍由 WebGPU 完成。
+验证入口：npm test；npm run build；npm run check:h07；npm run check:motion；npm run check:neutral；npm run check:graze；npm run check:realism；npm run check:browser。
+
+下一制作项
+按 motion-intake.json，下一匹为 H08，制作独立绑定和低头、采食、抬头三段；先检查视频裁切和延长接缝。
+柳冠仍有规则弧线、尾根仍需近景精修；地形行走、其余马匹绑定、手工重拓扑和性能验收尚未完成。

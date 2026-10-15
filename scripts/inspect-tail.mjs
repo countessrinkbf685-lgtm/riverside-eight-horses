@@ -1,0 +1,3 @@
+﻿import {chromium} from 'playwright-core';
+const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-webgpu']});
+try{const p=await b.newPage({viewport:{width:1500,height:950}});await p.goto('http://127.0.0.1:5173/motion-review.html?view=tail');await p.waitForFunction(()=>window.motionReview?.state.ready);for(const [name,angle,t] of [['tail-close',0,2],['tail-far-side',1,6],['tail-rear',2,2],['tail-neutral',0,0]]){await p.evaluate(([angle,t])=>{motionReview.state.playing=false;motionReview.setClip('Idle');motionReview.evaluate(t);motionReview.tailView(angle);},[angle,t]);await p.waitForTimeout(350);await p.screenshot({path:`artifacts/realism-v3/${name}.png`});}}finally{await b.close();}

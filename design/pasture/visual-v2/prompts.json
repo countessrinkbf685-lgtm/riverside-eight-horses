@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-13",
+  "intent": "riverbank_revision",
+  "records": [
+    {
+      "id": "C00",
+      "file": "images/00-riverside-atmosphere.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET: the current panoramic eight-horse pasture concept. Image 2 is the authoritative ORIGINAL HANDSCROLL for composition and the blue-gray water band. Revise Image 1 into a convincing quiet RIVERSIDE PASTURE, preserving its existing painting-informed 3D style. Change ONLY the middle-distance terrain and water/shore arrangement, and reduce the overly dense far trees. Preserve exactly EIGHT horses, ONE blue-robed herder, every horse's identity, markings, pose, size and screen position, the giant willow trunk, willow canopy, left foreground rock outcrop and all foreground rocks. Keep the camera and panoramic aspect ratio.\nPrimary correction: a shallow-looking, gently BENDING RIVER CHANNEL crosses the MIDDLE GROUND BEHIND all horses and behind the giant willow's root bank. The continuous river ribbon emerges from behind the rocky outcrop at the LEFT, bends gently across the open gaps behind the center horses, is occluded by the willow trunk and low branches, and continues out the RIGHT edge behind the pinto and herder. Its near and far banks must BOTH be legible, with a longitudinal open channel continuing beyond both image sides rather than an enclosed pool. River surface varies from a narrow perspective band at left to a somewhat broader but still restrained band at middle/right, roughly 8–14 percent of image height where unobstructed. Keep all horse hooves, noses and the herder's boots on DRY grassland of the NEAR bank. The willow stands on a slightly raised irregular grass-earth bank with exposed roots; no roots or horses submerged. No river crossing the foreground or weaving between horses.\nWater appearance: muted gray-green and blue-gray slow water, a few long fine HORIZONTAL ripples, subtle fragmented sky and willow reflections, low contrast soft diffuse daylight; clear but restrained waterside dark soil seam and small erosion edge. Left rocks meet/overhang the near bank where the channel disappears behind them. The opposite bank is a low softly curving earthen margin with sparse low vegetation, fading into warm atmospheric distance; remove the continuous dense forest wall and preserve empty quiet background. No lake, enclosed oval pond, beach, giant open water, ocean, waterfalls, whitewater, boats, bridge, buildings, mountains or new figures. No dramatic blue water or bright reflective glare. Preserve original intimate, calm horizontal-scroll composition, neutral soft light, ochre earth and pale horse volumes. No text, labels, UI, border or watermark. This is a focused riverbank correction, not a new scene.",
+      "references": [
+        "../visual-v1/images/00-atmosphere.png",
+        "../../../郎世宁_郊原牧马图卷_6882x2160.png"
+      ],
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a13065-6b8c-7a81-b8a6-89203d98e240\\exec-432289be-0da4-4038-a6e9-f805bc452a8c.png",
+      "review": "八马及牧者仍在近岸陆地；河道由左岩后露出、在中景延伸并出右侧画幅。河形为经用户确认的设计推断，不作为历史水文复原。"
+    }
+  ]
+}

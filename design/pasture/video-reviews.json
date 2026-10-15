@@ -1,0 +1,254 @@
+{
+  "gemini_generated_video_3ea4540b": {
+    "subject": "H06",
+    "observed_action": "站立 / 慢走参考",
+    "review": "首尾有耳或蹄裁切，取中段研究步态；不能直接作为完整接地验收。",
+    "prompt_ids": [
+      "H06-Walk"
+    ]
+  },
+  "gemini_generated_video_1941354a": {
+    "subject": "P01",
+    "observed_action": "伸手 / 手势",
+    "review": "可作手臂参考；大幅手势超出首版静立微动范围。"
+  },
+  "gemini_generated_video_24871851": {
+    "subject": "P01",
+    "observed_action": "向前行走 / 转头",
+    "review": "作为后续人物行走参考，首版不启用路径行走。"
+  },
+  "gemini_generated_video_6c783e0a": {
+    "subject": "P01",
+    "observed_action": "抬手遮额远望",
+    "review": "后续可选动作，首版不自动加入。"
+  },
+  "gemini_generated_video_8f3f59dd": {
+    "subject": "P01",
+    "observed_action": "原地左右观察",
+    "review": "优先参考小幅转头与重心。"
+  },
+  "gemini_generated_video_9bb043d0": {
+    "subject": "P01",
+    "observed_action": "多动作延长段",
+    "review": "出现绳状道具，需核实，暂不引入运行场景。"
+  },
+  "gemini_generated_video_aaeb9d81": {
+    "subject": "P01",
+    "observed_action": "多动作延长段",
+    "review": "出现绳状道具，身份/道具连续性另查；非可直接导入的骨骼动画。"
+  },
+  "gemini_generated_video_37037a6e": {
+    "subject": "H06",
+    "observed_action": "待机 / 转头 / 摆尾",
+    "review": "全身画幅；0–3 秒以静立为主，约 3–4 秒转头，5 秒前后摆尾。已加密抽帧；用于 Idle 手工编排，不直接转为骨骼。",
+    "prompt_ids": [
+      "H06-Idle"
+    ]
+  },
+  "gemini_generated_video_3b56819c": {
+    "subject": "H05（候选）",
+    "observed_action": "站立 / 低头 / 抬头",
+    "review": "16 秒延长片段；浅白身份需与 H01 区分；采食动作可作颈部参考。"
+  },
+  "gemini_generated_video_3e726afb": {
+    "subject": "H04（候选）",
+    "observed_action": "慢走",
+    "review": "起始头耳和蹄部裁切，中段侧面可用于动作节奏参考；不能据此验收逐蹄接地。"
+  },
+  "gemini_generated_video_76de8d3b": {
+    "subject": "H03 / H04 待核对",
+    "observed_action": "站立 / 轻转头",
+    "review": "棕色马全身画幅；先保留候选身份，不能仅凭颜色自动绑定到资产。"
+  },
+  "gemini_generated_video_950383ab": {
+    "subject": "H03 / H04 待核对",
+    "observed_action": "站立 / 尾部变化",
+    "review": "四点抽帧可见姿态稳定；循环连续性尚待逐帧审查。"
+  },
+  "gemini_generated_video_aaab9a9b": {
+    "subject": "H02",
+    "observed_action": "黑马待机",
+    "review": "全身可见；原有站姿与浅色下肢保留，首尾循环尚未验收。",
+    "prompt_ids": [
+      "H02-Idle"
+    ]
+  },
+  "gemini_generated_video_b0d02d8f": {
+    "subject": "H01（候选）",
+    "observed_action": "白马待机",
+    "review": "耳部与蹄部裁切，无法完整核对接地；不作为全身动作验收依据。"
+  },
+  "gemini_generated_video_ba3590e9": {
+    "subject": "H03 / H04 待核对",
+    "observed_action": "站立 / 小幅姿态变化",
+    "review": "四点抽帧，未据此认定完整动作类型或通过循环验收。"
+  },
+  "gemini_generated_video_c8ebd62b": {
+    "subject": "H04（候选）",
+    "observed_action": "低头采食 / 抬头",
+    "review": "可拆分低头、保持和抬头参考；嘴鼻接近地面，后续须在模型中检查穿地。"
+  },
+  "gemini_generated_video_fc73daa5": {
+    "subject": "H03 / H04 待核对",
+    "observed_action": "站立 / 小幅姿态变化",
+    "review": "棕马身份需确认；暂无完整慢走接地验收结论。"
+  },
+  "gemini_generated_video_fc893e1d": {
+    "subject": "H05（候选）",
+    "observed_action": "白马待机",
+    "review": "全身画幅稳定；与 H01 的身份需要单件图继续核对。"
+  },
+  "gemini_generated_video_00047139": {
+    "subject": "H01",
+    "observed_action": "待机 / 轻微耳头变化",
+    "review": "全身画幅，与 H01 单件参考的左向体态一致。20 点抽帧可用于中性站姿待机编排；不支持画中屈肢定姿。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "authoring_reference",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H01-Idle"
+    ]
+  },
+  "gemini_generated_video_023fd044": {
+    "subject": "H02",
+    "observed_action": "黑马待机 / 摆尾",
+    "review": "头耳与蹄底裁切。仅用于躯干、毛色和尾部参考，不能据此测量四蹄或完整循环。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "partial_reference_cropped",
+    "review_method": "4_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H02-Idle"
+    ]
+  },
+  "gemini_generated_video_17c07da1": {
+    "subject": "H07",
+    "observed_action": "转头观察 / 回正",
+    "review": "20 点抽帧：约 1–3 秒向镜头转头，约 3–5 秒返回；全身可见。可进入 Look 动作编排，循环接口仍需校准。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "authoring_reference",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [
+      {
+        "action": "LookToward",
+        "start_s": 1.0,
+        "end_s": 3.0
+      },
+      {
+        "action": "LookReturn",
+        "start_s": 3.0,
+        "end_s": 5.0
+      }
+    ],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H07-Look"
+    ]
+  },
+  "gemini_generated_video_2265f448": {
+    "subject": "H06",
+    "observed_action": "低头 / 保持 / 抬头",
+    "review": "全身画幅。20 点抽帧可分为约 1.2–2.9 秒低头、2.9–6.3 秒保持、6.3–7.1 秒抬头。鼻端接近地面但四点/20 点抽帧不足以验收穿地和蹄漂。优先进入采食动作编排。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "priority_authoring_reference",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [
+      {
+        "action": "GrazeDown",
+        "start_s": 1.2,
+        "end_s": 2.9
+      },
+      {
+        "action": "GrazeLoop",
+        "start_s": 2.9,
+        "end_s": 6.3
+      },
+      {
+        "action": "GrazeUp",
+        "start_s": 6.3,
+        "end_s": 7.1
+      }
+    ],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H06-Graze"
+    ]
+  },
+  "gemini_generated_video_983f5252": {
+    "subject": "H08",
+    "observed_action": "花马待机 / 摆尾",
+    "review": "棕白大斑块可识别；耳部与下肢画幅不足。仅作局部体态和尾部参考，不作为接地验收素材。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "partial_reference_cropped",
+    "review_method": "4_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H08-Idle"
+    ]
+  },
+  "gemini_generated_video_df7c0ebc": {
+    "subject": "H08",
+    "observed_action": "延长待机 / 低头采食 / 抬头",
+    "review": "16 秒延长片段。前半段裁切耳和蹄，后半段约 9.1 秒开始低头，10.7–13.4 秒保持，13.4–15 秒抬头。20 点抽帧已审；延长接缝及花纹连续性仍需完整视频核查。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "partial_graze_reference",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [
+      {
+        "action": "GrazeDown",
+        "start_s": 9.1,
+        "end_s": 10.7
+      },
+      {
+        "action": "GrazeLoop",
+        "start_s": 10.7,
+        "end_s": 13.4
+      },
+      {
+        "action": "GrazeUp",
+        "start_s": 13.4,
+        "end_s": 15.0
+      }
+    ],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H08-Graze"
+    ]
+  },
+  "gemini_generated_video_e5c8178c": {
+    "subject": "H06",
+    "observed_action": "待机 / 转头 / 摆尾",
+    "review": "20 点抽帧，与上一批 H06 待机动作内容相近；全身可见。作为备用参考，保留已有 Idle，避免把重复参考当作新增骨骼动作。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "alternate_idle_reference",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H06-Idle"
+    ]
+  },
+  "gemini_generated_video_f155de74": {
+    "subject": "H07",
+    "observed_action": "收蹄落地 / 待机 / 摆尾",
+    "review": "20 点抽帧可见起始前蹄抬起，随后落地；约 1 秒后以静立为主，4 秒前后摆尾。不可把整段当作四蹄始终固定的 Idle。",
+    "ingest_batch": "2026-10-13-evening",
+    "pipeline_status": "authoring_reference_trim_start",
+    "review_method": "20_sampled_frames_not_full_motion_validation",
+    "suggested_segments": [
+      {
+        "action": "IdleStudy",
+        "start_s": 1.0,
+        "end_s": 7.8
+      }
+    ],
+    "segment_times": "approximate_visual_reference_not_baked_clip_boundaries",
+    "prompt_ids": [
+      "H07-Idle"
+    ]
+  }
+}

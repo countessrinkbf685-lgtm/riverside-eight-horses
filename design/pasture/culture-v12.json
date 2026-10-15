@@ -1,0 +1,64 @@
+{
+  "version": "culture-v12",
+  "source": {
+    "path": "郊原牧马图_考据研究.md",
+    "sha256": "c41d54e42816fca02ff00c30a6e538e564647f631a22b3146a21f25463da2b94",
+    "served_copy": "/references/cultural-research.txt",
+    "verification": "User-supplied research, not independently verified archival evidence"
+  },
+  "horse_number_mapping": {
+    "H01": {
+      "study_id": "H08",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H02": {
+      "study_id": "H07",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H03": {
+      "study_id": "H06",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H04": {
+      "study_id": "H05",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H05": {
+      "study_id": "H04",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H06": {
+      "study_id": "H03",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H07": {
+      "study_id": "H02",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    },
+    "H08": {
+      "study_id": "H01",
+      "meaning": "runtime ID preserved; study numbers right-to-left"
+    }
+  },
+  "chapters": [
+    "八骏，各有生意",
+    "牧者，画中的日常",
+    "水草之间，理想郊原",
+    "红叶，秋日的消息",
+    "海西笔意，长卷静观"
+  ],
+  "scene_changes": {
+    "foliage": "22 maple-like palmate shrubs, 11 on left rock slope / 11 beside willow; coherent leaf removal in winter",
+    "camera": "redleaves preset for cultural tour",
+    "actor_identity": "8 coat-color interpretation cards and anonymous herder description; original animation assignments preserved"
+  },
+  "editorial_policy": [
+    "Traditional horse names are allusions, not invented official identities.",
+    "Nanyuan / Yongding River setting remains an interpretive geographic reference.",
+    "Herder personal name, exact office and ethnicity are not inferred as fact.",
+    "Botanical morphology does not certify a species or exact solar term.",
+    "Quoted poems and the research transcription of the signature are distinguished from inscriptions on the painting.",
+    "No invented imperial seals or attribution marks added to the scene."
+  ],
+  "checks": "artifacts/culture-v12/check-report.json"
+}

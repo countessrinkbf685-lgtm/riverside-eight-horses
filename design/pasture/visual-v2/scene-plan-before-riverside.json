@@ -1,0 +1,369 @@
+{
+  "title": "郊原牧马图 WebGPU 场景策划",
+  "version": "planning-v1",
+  "date": "2026-10-12",
+  "status": "planning_and_visual_design_v1_no_3d_assets_or_runtime_implemented",
+  "visual_design": "visual-v1/index.html",
+  "reference_image": "../../郎世宁_郊原牧马图卷_6882x2160.png",
+  "reference_size_px": [
+    6882,
+    2160
+  ],
+  "reference_project": "E:/DelaunayVoronoiFokkerPlanck/design/balcony",
+  "annotation": {
+    "origin": "top_left",
+    "u": "right",
+    "v": "down",
+    "meaning": "approximate_visible_torso_point_not_hoof_contact",
+    "world_positions": "pending_graybox_calibration"
+  },
+  "experience": {
+    "default": "painting_composition_with_subtle_motion",
+    "camera_states": [
+      "SCROLL",
+      "ENTER_DETAIL",
+      "DETAIL",
+      "RETURN"
+    ],
+    "views": [
+      "全卷",
+      "左侧马群",
+      "柳下灰马",
+      "牧者花马"
+    ],
+    "detail_yaw_limit_deg_initial": 15,
+    "motion_modes": [
+      "静观",
+      "微动"
+    ],
+    "max_walking_horses": 2
+  },
+  "world_draft": {
+    "unit": "meter",
+    "up": "+Y",
+    "scroll_right": "+X",
+    "toward_viewer": "+Z",
+    "footprint_m": [
+      24,
+      12
+    ],
+    "horse_withers_height_m": [
+      1.35,
+      1.55
+    ],
+    "willow_height_m": [
+      8,
+      10
+    ],
+    "all_dimensions": "design_assumptions"
+  },
+  "horses": [
+    {
+      "id": "H01",
+      "name": "左前白马",
+      "reference_uv": [
+        0.192,
+        0.646
+      ],
+      "silhouette_note": "低首贴地的复杂姿态；先定姿，再考虑过渡",
+      "first_stage": "P2",
+      "behavior_note": "画中定姿、呼吸、耳动",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H02",
+      "name": "左前黑马",
+      "reference_uv": [
+        0.222,
+        0.758
+      ],
+      "silhouette_note": "曲颈屈肢，与 H01 成组；保留浅色鬃尾",
+      "first_stage": "P2",
+      "behavior_note": "画中定姿、呼吸、耳尾微动",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H03",
+      "name": "后排深栗马",
+      "reference_uv": [
+        0.286,
+        0.504
+      ],
+      "silhouette_note": "背向观察者，优先验证背视轮廓",
+      "first_stage": "P2",
+      "behavior_note": "待机、转头、尾动",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H04",
+      "name": "中左黄褐马",
+      "reference_uv": [
+        0.306,
+        0.61
+      ],
+      "silhouette_note": "侧面长轮廓，活动范围留在左侧马群",
+      "first_stage": "P2",
+      "behavior_note": "待机、采食、短程慢走",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H05",
+      "name": "中左白马",
+      "reference_uv": [
+        0.373,
+        0.574
+      ],
+      "silhouette_note": "低垂头颈，核对口鼻与地面关系",
+      "first_stage": "P2",
+      "behavior_note": "采食、抬头",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H06",
+      "name": "柳左灰白马",
+      "reference_uv": [
+        0.516,
+        0.724
+      ],
+      "silhouette_note": "首个样片主角；灰斑臀部、深色下肢",
+      "first_stage": "P1",
+      "behavior_note": "待机、慢走、逐蹄接地、耳动、甩尾",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H07",
+      "name": "柳旁浅褐马",
+      "reference_uv": [
+        0.591,
+        0.611
+      ],
+      "silhouette_note": "接近正面，检查胸部和前肢间距",
+      "first_stage": "P2",
+      "behavior_note": "待机、轻转头",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    },
+    {
+      "id": "H08",
+      "name": "牧者旁棕白花马",
+      "reference_uv": [
+        0.849,
+        0.683
+      ],
+      "silhouette_note": "大块花斑按可见侧匹配，与牧者整体约束",
+      "first_stage": "P2",
+      "behavior_note": "低头采食、抬头、尾动",
+      "world_position_m": null,
+      "asset_status": "planned",
+      "asset_url": null
+    }
+  ],
+  "environment": [
+    {
+      "id": "P01",
+      "name": "牧者",
+      "reference_uv": [
+        0.917,
+        0.705
+      ],
+      "method": "independent_character"
+    },
+    {
+      "id": "T01",
+      "name": "主柳",
+      "reference_uv": [
+        0.638,
+        0.5
+      ],
+      "method": "trunk_branches_leaf_clusters_separate"
+    },
+    {
+      "id": "G01",
+      "name": "主地形",
+      "method": "editable_terrain_with_cpu_heightfield"
+    },
+    {
+      "id": "T02",
+      "name": "左侧杂木",
+      "method": "two_tree_shapes_and_instanced_leaves"
+    },
+    {
+      "id": "R01-R03",
+      "name": "坡石",
+      "method": "three_rock_variants_and_long_ledge"
+    },
+    {
+      "id": "V01-V03",
+      "name": "草丛",
+      "method": "three_instanced_cluster_types"
+    },
+    {
+      "id": "B01",
+      "name": "远景",
+      "method": "two_or_three_depth_layers_cleaned_of_foreground_ghosts"
+    }
+  ],
+  "horse_pipeline": {
+    "order": [
+      "identity_card",
+      "neutral_reference",
+      "static_mesh",
+      "cleanup_retopology_lods",
+      "bake_textures",
+      "equine_rig",
+      "offline_animation",
+      "web_pack",
+      "runtime_contacts"
+    ],
+    "deform_bone_count_target": [
+      45,
+      65
+    ],
+    "clip_stage_one": [
+      "Idle",
+      "Walk"
+    ],
+    "clip_stage_two": [
+      "GrazeDown",
+      "GrazeLoop",
+      "GrazeUp",
+      "Look"
+    ],
+    "micro_actions": [
+      "EarFlick",
+      "TailSwish",
+      "Breath"
+    ],
+    "complex_painting_poses": [
+      "PoseH01",
+      "PoseH02"
+    ],
+    "runtime": "in_place_walk_with_speed_sync_and_contact_markers",
+    "ai_video": "reference_only_not_automatic_mocap"
+  },
+  "rendering": {
+    "backend": "WebGPU",
+    "framework": "Three.js WebGPU + TSL",
+    "version": "lock_after_feature_spike",
+    "canvas_count": 1,
+    "fallback_v1": "original_painting_viewer_with_explanation",
+    "foliage_v1": "instanced_vertex_wind",
+    "compute": "only_after_profiling",
+    "cpu": [
+      "herd_behavior",
+      "IK",
+      "height_sampling"
+    ],
+    "style": "restrained_color_soft_volume_object_space_brush_detail"
+  },
+  "budgets_unverified_targets": {
+    "desktop": {
+      "resolution_px": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "frame_p95_ms": 16.7,
+      "visible_triangles": [
+        250000,
+        450000
+      ],
+      "draw_calls_including_shadow_post_max": 180,
+      "cold_transfer_mb_max": 20,
+      "gpu_memory_mb_target_max": 512
+    },
+    "low": {
+      "resolution_px": [
+        1280,
+        720
+      ],
+      "dpr": 1,
+      "frame_p95_ms": 33.3,
+      "visible_triangles": [
+        100000,
+        200000
+      ],
+      "draw_calls_including_shadow_post_max": 100,
+      "cold_transfer_mb_max": 12,
+      "gpu_memory_mb_target_max": 256
+    },
+    "full_transfer_mb_max": 60,
+    "horse_lod_triangles": [
+      [
+        35000,
+        50000
+      ],
+      [
+        12000,
+        20000
+      ],
+      [
+        3000,
+        6000
+      ]
+    ]
+  },
+  "milestones": [
+    {
+      "id": "P0",
+      "name": "原画标注与 WebGPU 灰盒",
+      "person_days": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "P1",
+      "name": "H06 与柳根样片",
+      "person_days": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "全卷静态成形",
+      "person_days": [
+        6,
+        10
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "微动与游卷",
+      "person_days": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "优化与美术验收",
+      "person_days": [
+        3,
+        5
+      ]
+    }
+  ],
+  "acceptance_targets": {
+    "anchor_projection_error_canvas_width_max": 0.02,
+    "flat_test_stance_hoof_vertical_abs_error_m_max": 0.01,
+    "flat_test_stance_horizontal_drift_m_max": 0.02,
+    "behavior_soak_minutes": 10,
+    "performance_sample_seconds_per_route_after_warmup_min": 60
+  },
+  "implemented": []
+}

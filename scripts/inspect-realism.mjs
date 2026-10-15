@@ -1,0 +1,9 @@
+﻿import {chromium} from 'playwright-core';
+import {writeFile} from 'node:fs/promises';
+const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-webgpu']});
+try{const p=await b.newPage({viewport:{width:1600,height:1000}});p.on('pageerror',e=>console.log(e.message));await p.goto('http://127.0.0.1:5173/');await p.waitForFunction(()=>window.pasture?.state.ready);console.log(await p.evaluate(()=>({failed:pasture.state.failed,willow:pasture.state.environment.willow})));await p.waitForTimeout(500);await p.screenshot({path:'artifacts/realism-v3/scene-desktop.png'});await p.evaluate(()=>pasture.chooseView('willow',true));await p.waitForTimeout(400);await p.screenshot({path:'artifacts/realism-v3/scene-willow.png'});await p.evaluate(()=>pasture.chooseView('canopy',true));await p.waitForTimeout(300);await p.screenshot({path:'artifacts/realism-v3/canopy-close.png'});const result=await p.evaluate(async()=>{
+ const {GLTFExporter}=await import('/node_modules/three/examples/jsm/exporters/GLTFExporter.js');const THREE=await import('/node_modules/three/build/three.webgpu.js');
+ const group=pasture.willow.clone(true);group.traverse(o=>{if(o.isMesh)o.material=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,side:THREE.DoubleSide});});
+ const bytes=new Uint8Array(await new GLTFExporter().parseAsync(group,{binary:true,onlyVisible:true}));let str='';for(let i=0;i<bytes.length;i+=8192)str+=String.fromCharCode(...bytes.subarray(i,i+8192));return {base64:btoa(str),report:pasture.state.environment.willow};});
+ await writeFile('artifacts/realism-v3/willow-branches.glb',Buffer.from(result.base64,'base64'));await writeFile('artifacts/realism-v3/willow-report.json',JSON.stringify(result.report,null,2));
+}finally{await b.close();}

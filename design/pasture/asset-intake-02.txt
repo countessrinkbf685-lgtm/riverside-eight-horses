@@ -1,0 +1,51 @@
+沿水岸牧马 · T02 与第二批视频接入
+2026-10-13 晚间
+
+本次新增：T02 枝干模型 1 件、马视频 8 段。
+累计：12 件源 GLB、26 段视频（20 段马、6 段牧者）。原始文件保留原名、原路径和内容。
+
+T02
+源：design/pasture/83c204b4c4421c915f097c40b3dd0934.glb（77,310,336 bytes）
+网页副本：public/models/prepared/83c204b4c4421c915f097c40b3dd0934.glb
+网页副本：29,604 三角面，约 1.35 MiB；误差约束保留分枝，因此未强制压至 20,000 面。
+左侧两棵程序占位树已移除，以新 T02 主树及缩小旋转的第二株替换。
+树木锚点按下部树干归中，避免不对称树冠导致树根偏离种植位置。
+叶簇与枝干分离：180 个真实枝干表面锚点、每株 5,400 片程序叶，带少量赭红叶。
+新增细枝从采样到的树皮顶点开始；叶片风动权重在叶柄处为零。
+原始枝干单件检查：/asset-review.html?asset=T02
+场景：/；选择“左侧马群”近看。
+代码：src/pasture/t02.js；浏览器采样记录：artifacts/t02/runtime-report.json。
+统计：environment-v4.json；整场性能尚未完成验收。
+
+新视频识别与处理
+00047139：H01 中性站姿待机，全身可见，20 点抽帧。
+023fd044：H02 待机/摆尾；头耳与蹄部裁切，只作局部参考。
+17c07da1：H07 转头/回正，全身可见，20 点抽帧。
+2265f448：H06 低头/保持/抬头，全身可见，20 点抽帧；列为下一项动画编排参考。
+983f5252：H08 待机/摆尾；头耳与下肢裁切，只作局部参考。
+df7c0ebc：H08 16 秒延长采食片段，20 点抽帧；前半段裁切、延长接缝待完整核查。
+e5c8178c：H06 待机/转头/摆尾，20 点抽帧；与已有待机内容相近，作为备用参考。
+f155de74：H07 起始收蹄后站定，20 点抽帧；待机参考建议从约 1 秒开始。
+
+视频页面已关联各马的提示词，标出已收到的参考，支持折叠后播放，视频 preload=none。
+精确文件名与评论：video-reviews.json。
+动作接收与制作队列：motion-intake.json。
+分段时间是抽帧估计，未自动裁切原片、未视为已烘焙动作边界。
+本次没有新增骨骼动画。场景继续使用已验证的 H06 Idle；Walk 仍限于平地检查页。
+
+下一项制作依据
+H06：GrazeDown 约 1.2–2.9 秒，GrazeLoop 约 2.9–6.3 秒，GrazeUp 约 6.3–7.1 秒。
+先整理肩颈变形、检查口鼻离地及四蹄稳定，再把这三个片段接入运行时。
+H07：随后制作 Look 与裁去开头收蹄的 Idle。
+H08：先核查延长接缝和身体花纹连续性，再编排 Graze。
+
+复现与验证
+node scripts/prepare-assets.mjs 83c204b4c4421c915f097c40b3dd0934.glb
+python scripts/audit-sources.py
+python scripts/build-video-prompts.py
+node scripts/write-asset-registry.mjs
+node scripts/report-environment.mjs（包含 artifacts/t02/runtime-report.json 的已捕获 T02 几何统计）
+python design/pasture/build_plan.py
+npm test
+npm run build
+npm run check:browser

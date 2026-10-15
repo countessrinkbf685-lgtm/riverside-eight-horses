@@ -1,0 +1,223 @@
+{
+  "version": "environment-v9",
+  "status": "all_nine_actor_rigs_and_shared_H08_P01_contact_patch",
+  "reference": "design/pasture/visual-v2/images/00-riverside-atmosphere.png",
+  "sources": [
+    "E:/fabotanic/src/modules/math.js",
+    "E:/fabotanic/src/modules/geometry.js",
+    "E:/fabotanic/src/modules/tree.js",
+    "E:/fabotanic/src/modules/tree-base.js",
+    "E:/fabotanic/src/modules/field-composer.js",
+    "E:/fabotanic/src/garden/kit.mjs"
+  ],
+  "adaptation": "Math and leaf/tube geometry helpers snapshotted with ES module wrappers; scene-specific species forms, layout, river and terrain authored in this project. See src/pasture/vendor/fabotanic/provenance.json.",
+  "features": {
+    "terrain": "v3: wider open river, raised outcrops with eroded fragments, clustered meadow and layered far-bank crowns",
+    "rockFragments": 318,
+    "vegetation": {
+      "profiles": {
+        "meadow": {
+          "instances": 19000,
+          "seed": 701
+        },
+        "sedge": {
+          "instances": 440,
+          "seed": 709
+        },
+        "rosette": {
+          "instances": 1700,
+          "seed": 719
+        },
+        "fern": {
+          "instances": 140,
+          "seed": 727
+        },
+        "shrub": {
+          "instances": 225,
+          "seed": 733
+        },
+        "russet": {
+          "instances": 22,
+          "seed": 739
+        }
+      },
+      "treeCount": 2,
+      "source": "FABOTANIC curved leaf / tube + deterministic patch composition",
+      "oppositeBankGroups": 300
+    },
+    "willow": {
+      "anchors": 46,
+      "structuralAnchors": 32,
+      "crownTipAnchors": 14,
+      "silhouette": "unequal descending boughs, clustered curtains, compact leafy leaders on actual twig tips",
+      "pendants": 2797,
+      "leaves": 46505,
+      "woodTriangles": 169332,
+      "leafTriangles": 558060,
+      "attachment": "actual normalized T01 bark vertices",
+      "wind": "shared branch phase and inherited weights; structural roots pinned",
+      "source": "hierarchical tapered branches and narrow curved leaves; editable Blender snapshot"
+    },
+    "t02": {
+      "anchors": 180,
+      "leaves": 5400,
+      "attachment": "shoot origins sampled directly from normalized bark vertices",
+      "foliageTriangles": 32400,
+      "shootTriangles": 16200,
+      "instances": 2,
+      "source": "83c204b4c4421c915f097c40b3dd0934.glb",
+      "proceduralTrunkReplaced": true
+    },
+    "contactPatch": "H08 and P01 share a level area with a smooth transition to the existing meadow."
+  },
+  "profiles": {
+    "meadow": {
+      "name": "弯叶草丛",
+      "count": 19000,
+      "seed": 701
+    },
+    "sedge": {
+      "name": "岸缘窄叶草",
+      "count": 440,
+      "seed": 709
+    },
+    "rosette": {
+      "name": "贴地阔叶",
+      "count": 1700,
+      "seed": 719
+    },
+    "fern": {
+      "name": "林下羽状叶",
+      "count": 140,
+      "seed": 727
+    },
+    "shrub": {
+      "name": "赭绿小叶灌木",
+      "count": 225,
+      "seed": 733
+    },
+    "russet": {
+      "name": "独立红叶灌木",
+      "count": 22,
+      "seed": 739
+    }
+  },
+  "comparison": {
+    "before": "artifacts/realism-v3/before-scene.png",
+    "after": "artifacts/realism-v3/scene-desktop.png",
+    "changes": [
+      "Replaced repeated upward arches with unequal descending boughs and clustered curtains; 14 actual crown tips receive short leafy leaders.",
+      "Narrow folded lanceolate leaves replace broad repeated fins.",
+      "Pinned structural roots and shared wind phase for branches and leaves.",
+      "H06 uses 720 surface-fitted tapered locks; continuous dark root to light tip; original published body geometry and skin weights preserved exactly."
+    ],
+    "editable": [
+      "artifacts/realism-v3/T01-willow-refinement.blend",
+      "artifacts/h06/H06-rig-study.blend",
+      "artifacts/h07/H07-rig-study.blend"
+    ]
+  },
+  "geometry": {
+    "environmentTrianglesIncludingInstances": 2018508,
+    "environmentDrawObjects": 40,
+    "uniqueGeometries": 38,
+    "note": "Includes T02 procedural shoots/leaves and willow branches from captured runtime reports. Excludes imported horse/herder/T01/T02/rock meshes, shadows and visibility culling. Not a frame-rate benchmark."
+  },
+  "figureAnchors": [
+    {
+      "id": "H01",
+      "x": -7.4,
+      "z": 2.4,
+      "heading": 180,
+      "y": 0.4767088620106397,
+      "nearBankZ": -4.990647144277351,
+      "farBankZ": -10.891777729775113
+    },
+    {
+      "id": "H02",
+      "x": -6.3,
+      "z": 4.6,
+      "heading": 180,
+      "y": 0.44598555786092803,
+      "nearBankZ": -5.0405407655833,
+      "farBankZ": -10.952369333315515
+    },
+    {
+      "id": "H03",
+      "x": -5.1,
+      "z": -2.4,
+      "heading": 270,
+      "y": 0.41495238476022767,
+      "nearBankZ": -5.149167594242549,
+      "farBankZ": -11.117191621126793
+    },
+    {
+      "id": "H04",
+      "x": -4.3,
+      "z": 0.2,
+      "heading": 180,
+      "y": 0.34802749857858273,
+      "nearBankZ": -5.018263750737882,
+      "farBankZ": -11.046487499003005
+    },
+    {
+      "id": "H05",
+      "x": -2.9,
+      "z": -2.4,
+      "heading": 0,
+      "y": 0.4087034278176586,
+      "nearBankZ": -4.6371735410643025,
+      "farBankZ": -10.803401669102028
+    },
+    {
+      "id": "H06",
+      "x": 0.4,
+      "z": 3.4,
+      "heading": 0,
+      "y": 0.428449180089465,
+      "nearBankZ": -4.057427055104994,
+      "farBankZ": -10.588537057951767
+    },
+    {
+      "id": "H07",
+      "x": 2.2,
+      "z": -1.6,
+      "heading": 90,
+      "y": 0.54955620593885,
+      "nearBankZ": -3.8359375488120504,
+      "farBankZ": -10.499056144971398
+    },
+    {
+      "id": "H08",
+      "x": 8.4,
+      "z": 2,
+      "heading": 180,
+      "y": 0.45816315619343606,
+      "nearBankZ": -2.7507091688554994,
+      "farBankZ": -9.13236811610655
+    },
+    {
+      "id": "P01",
+      "x": 10.2,
+      "z": 2.2,
+      "heading": 180,
+      "y": 0.45816315619343606,
+      "nearBankZ": -2.8719611045317355,
+      "farBankZ": -9.047499398995061
+    }
+  ],
+  "limitations": [
+    "T02 leaf placement is procedural art direction on the supplied branch mesh; source bare model is kept independently.",
+    "Plant groups represent visual morphology, not verified botanical species or habitat reconstruction.",
+    "Nine actors have stationary skeletal clips; H04/H06 walking verified on flat stages only. H01/H02 painting poses, terrain locomotion, art cleanup and performance acceptance remain pending."
+  ],
+  "checks": [
+    "deterministic seeds",
+    "6 vegetation layout and avoidance masks",
+    "valid finite geometry and indices",
+    "leaf-count independent wood skeleton",
+    "CPU/mesh height agreement",
+    "WebGPU browser regression"
+  ],
+  "actorMotionReport": "artifacts/cast-motion/check-report.json"
+}

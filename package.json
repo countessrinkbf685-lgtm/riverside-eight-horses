@@ -1,0 +1,55 @@
+{
+  "name": "riverside-eight-horses",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:browser": "node scripts/check-browser.mjs",
+    "check:motion": "node scripts/check-h06.mjs",
+    "prepare:h06": "node scripts/prepare-h06.mjs",
+    "check:graze": "node scripts/check-graze.mjs",
+    "check:neutral": "node scripts/check-h06-neutral.mjs",
+    "check:realism": "node scripts/check-realism.mjs",
+    "prepare:h07": "node scripts/prepare-h07.mjs",
+    "check:h07": "node scripts/check-h07.mjs",
+    "check:cast": "node scripts/check-cast.mjs",
+    "prepare:cast": "node scripts/prepare-cast.mjs",
+    "check:continuation": "node scripts/check-continuation.mjs",
+    "check:environment": "node scripts/check-environment.mjs",
+    "check:culture": "node scripts/check-culture.mjs",
+    "check:time": "node scripts/check-time-of-day.mjs",
+    "preview:promo": "node scripts/record-promo.mjs --preview",
+    "record:promo": "node scripts/record-promo.mjs",
+    "finish:promo": "node scripts/finish-promo.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.0",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "1.2.0",
+    "sharp": "0.35.5",
+    "playwright-core": "1.64.0"
+  },
+  "description": "郎世宁《郊原牧马图》（八骏图）WebGPU/Three.js 三维数字化交互复原与文化考据系统 | Digital Restoration & Interactive 3D Study of Giuseppe Castiglione's Eight Horses",
+  "license": "MIT",
+  "keywords": [
+    "webgpu",
+    "threejs",
+    "digital-heritage",
+    "digital-humanities",
+    "giuseppe-castiglione",
+    "chinese-art",
+    "palace-museum",
+    "procedural-generation",
+    "3d-reconstruction"
+  ]
+}

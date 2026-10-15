@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-13",
+  "generator": "built-in image_gen",
+  "selected_assets": [
+    {
+      "id": "C00",
+      "name": "全卷气氛图",
+      "file": "images/00-atmosphere.png",
+      "pixels": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "bytes": 3157408,
+      "status": "visual_reference_only",
+      "method": "构图、灯光与材质气氛参考",
+      "note": "原画布局与柔和体积的气氛目标。远处林带、地表细节为设计补全；不是实时渲染截图。"
+    },
+    {
+      "id": "H01",
+      "name": "左前白马",
+      "file": "images/H01-white-horse-v2.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1868174,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "暖白体色、浅色鬃尾。已修正第一稿背景边缘；绑定后恢复原画低首复杂姿态。"
+    },
+    {
+      "id": "H02",
+      "name": "左前黑马",
+      "file": "images/H02-black-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1985147,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "黑褐躯体与浅色长尾。下肢浅色细节需对照原图逐项校准；后续恢复屈肢姿态。"
+    },
+    {
+      "id": "H03",
+      "name": "后排深栗马",
+      "file": "images/H03-chestnut-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 2013790,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "深栗体色与偏后侧视角。背面结构优先；另一侧花纹和体态属于补全。"
+    },
+    {
+      "id": "H04",
+      "name": "中左黄褐马",
+      "file": "images/H04-ochre-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1981644,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "黄褐色长侧面轮廓。低头、慢走由骨架完成，不在生成网格中固定。"
+    },
+    {
+      "id": "H05",
+      "name": "中左白马",
+      "file": "images/H05-pale-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1965446,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "较修长的浅白马。与 H01 分开保存，作为独立毛色和体态参考。"
+    },
+    {
+      "id": "H06",
+      "name": "柳左灰白马",
+      "file": "images/H06-gray-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 2207240,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "首个样片主角。保留灰斑臀部、深色下肢和灰白长尾；先验证 Idle 与 Walk。"
+    },
+    {
+      "id": "H07",
+      "name": "柳旁浅褐马",
+      "file": "images/H07-dun-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1989417,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "偏正面视角，检查胸部与前肢间距。浅褐毛色，原画被遮挡部位为设计补全。"
+    },
+    {
+      "id": "H08",
+      "name": "牧者旁棕白花马",
+      "file": "images/H08-pinto-horse.png",
+      "pixels": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "bytes": 1977779,
+      "status": "visual_reference_only",
+      "method": "图生静态模型 → 拓扑整理 → 绑定",
+      "note": "棕白大块花斑，保持可见侧的主要斑纹关系。纹理制作时仍须逐块校准边界。"
+    },
+    {
+      "id": "P01",
+      "name": "蓝衣牧者",
+      "file": "images/P01-herder.png",
+      "pixels": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "bytes": 1995336,
+      "status": "visual_reference_only",
+      "method": "人物模型 → 服装与手部整理 → 轻动作",
+      "note": "牧者与花马分开建模。服装、腰间附件依据原图补全；头部和手部需二次检查。"
+    },
+    {
+      "id": "T01",
+      "name": "主柳树干",
+      "file": "images/T01-willow-trunk.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "bytes": 2183881,
+      "status": "visual_reference_only",
+      "method": "图生底稿 / 雕建主干 → 单独补枝叶",
+      "note": "主干、根系、大枝独立模型。细枝与叶片不焊成实体团块；导入后校准根颈高度。"
+    },
+    {
+      "id": "V01",
+      "name": "下垂柳枝",
+      "file": "images/V01-willow-bough.png",
+      "pixels": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1994759,
+      "status": "visual_reference_only",
+      "method": "程序枝条 / 叶面构造参考",
+      "note": "柳枝构造参考，建议用曲线枝条与窄叶面重建，保留稀疏间隙和风动层级。"
+    },
+    {
+      "id": "T02",
+      "name": "左侧杂木",
+      "file": "images/T02-autumn-tree.png",
+      "pixels": [
+        1145,
+        1374
+      ],
+      "mode": "RGB",
+      "bytes": 2399635,
+      "status": "visual_reference_only",
+      "method": "拆分两类植被 → 主干与叶簇重建",
+      "note": "杂木轮廓与配色参考。图中的小叶与红色阔叶应拆为两个植被对象，不当作同一树种。"
+    },
+    {
+      "id": "R01",
+      "name": "低矮坡石",
+      "file": "images/R01-rock-ledge.png",
+      "pixels": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2359117,
+      "status": "visual_reference_only",
+      "method": "图生模型 → 减面 → 多变体装配",
+      "note": "横向低坡石单件。拼接时旋转和局部改形，避免连续复制形成规则石墙。"
+    },
+    {
+      "id": "V02",
+      "name": "疏草丛",
+      "file": "images/V02-grass-clump.png",
+      "pixels": [
+        1374,
+        1145
+      ],
+      "mode": "RGB",
+      "bytes": 2128887,
+      "status": "visual_reference_only",
+      "method": "程序草叶 / 实例化参考",
+      "note": "草簇轮廓参考。用少量弯曲叶面与实例化重建，避免直接生成密实高面数草团。"
+    }
+  ],
+  "superseded": [
+    "images/H01-white-horse.png"
+  ],
+  "layout": "layout.json"
+}
