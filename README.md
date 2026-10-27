@@ -111,7 +111,7 @@
 
 ### 1. 克隆代码库
 ```bash
-git clone https://github.com/your-username/riverside-eight-horses.git
+git clone https://github.com/countessrinkbf685-lgtm/riverside-eight-horses.git
 cd riverside-eight-horses
 ```
 

@@ -84,7 +84,7 @@
 
 ```bash
 # 1. 克隆代码库
-git clone https://github.com/your-username/riverside-eight-horses.git
+git clone https://github.com/countessrinkbf685-lgtm/riverside-eight-horses.git
 cd riverside-eight-horses
 
 # 2. 安装依赖

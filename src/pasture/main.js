@@ -15,9 +15,9 @@ const state={ready:false,backend:null,loaded:[],failed:[],motion:!matchMedia('(p
 const actors=new Map(),resources=[],frameTimes=[];let culture,renderer,scene,camera,director,seasons,timeOfDay,atmosphere,last=performance.now(),simTime=0,comparison=false,disposed=false,returnView='home';
 function motionUI(){$('#motion').setAttribute('aria-pressed',String(state.motion));$('#motion').textContent=`动态 · ${state.motion?'开':'停'}`;}
 function chooseView(key,instant=false){if(!director)return;state.view=key;state.selected=null;$('#detail').hidden=true;director.go(key,instant);$('#view-name').textContent=views[key].name;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===key)));}
-function showDetail(id){const object=actors.get(id);if(!object)return;returnView=state.view in views?state.view:'home';state.selected=id;state.view='detail';culture?.describeActor(id);director.focus(object.position.x,object.position.z);const s=object.userData.spec;$('#detail-id').textContent=id;$('#detail-name').textContent=s.name;$('#detail-note').textContent=s.note;$('#detail-motion').href='/motion-review.html?asset='+id;$('#detail-motion').textContent=id+' 骨架与动作检查 ↗';$('#detail-stage').textContent=object.userData.animation?'已启用独立骨骼与动作，可在动作检查页切换角色查看。':'当前为静态环境资产。';$('#detail-prompt').href='/design/pasture/video-prompts/index.html'+(id.startsWith('H')?'#'+id+'-Idle':'');$('#detail').hidden=false;$('#view-name').textContent=s.name;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));}
+function showDetail(id){const object=actors.get(id);if(!object)return;returnView=state.view in views?state.view:'home';state.selected=id;state.view='detail';culture?.describeActor(id);director.focus(object.position.x,object.position.z);const s=object.userData.spec;$('#detail-id').textContent=id;$('#detail-name').textContent=s.name;$('#detail').hidden=false;$('#view-name').textContent=s.name;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));}
 function compare(){culture?.close(false);comparison=!comparison;$('#original').hidden=!comparison;$('#compare').setAttribute('aria-pressed',String(comparison));$('#detail').hidden=true;}
-function fallback(message){$('#loading').hidden=true;$('#fallback').hidden=false;$('#fallback-message').textContent=message;$('#original').hidden=false;$('#state').textContent='原画浏览 · WebGPU 未启动';document.querySelectorAll('[data-view],#motion,#quality,#compare,#walk,#reset-walk,[data-season],#season-cycle,#time-select,#time-cycle').forEach(b=>b.disabled=true);}
+function fallback(message){$('#loading').hidden=true;$('#fallback').hidden=false;$('#fallback-message').textContent=message;$('#original').hidden=false;$('#state').textContent='原画静观';document.querySelectorAll('[data-view],#motion,#quality,#compare,#walk,#reset-walk,[data-season],#season-cycle,#time-select,#time-cycle').forEach(b=>b.disabled=true);}
 $('#walk').onclick=()=>{for(const o of actors.values())o.userData.riverWalk?.start();$('#walk').disabled=true;$('#walk').textContent='慢行中';$('#reset-walk').hidden=false;state.motion=true;motionUI();};$('#reset-walk').onclick=()=>{for(const o of actors.values())o.userData.riverWalk?.reset();$('#walk').disabled=false;$('#walk').textContent='沿岸慢行';$('#reset-walk').hidden=true;};
 $('#retry').onclick=()=>location.reload();$('#compare').onclick=compare;$('#motion').onclick=()=>{state.motion=!state.motion;motionUI();};motionUI();
 $('#close-detail').onclick=()=>chooseView(returnView);
@@ -62,7 +62,7 @@ async function boot(){
   $('#progress').max=assetCatalog.length;
   const loading=Promise.resolve().then(async()=>{
    for(const id of order){
-    $('#loading-text').textContent=`接入 ${assetCatalog.find(a=>a.id===id).name} · ${state.loaded.length+1}/${assetCatalog.length}`;
+    $('#loading-text').textContent=`展卷铺陈 · ${assetCatalog.find(a=>a.id===id).name}`;
     try{
      const object=await loadAsset(id);resources.push(object);
      if(id.startsWith('H')||id==='P01'){placeActor(object,anchors.find(a=>a.id===id));scene.add(object);actors.set(id,object);object.userData.riverWalk=createRiverWalk(object);}
@@ -73,8 +73,8 @@ async function boot(){
     }catch(error){state.failed.push({id,message:error.message});console.error('Asset load failed',id,error);}
     $('#progress').value=state.loaded.length+state.failed.length;
    }
-   const requestedView=new URL(location.href).searchParams.get('view');if(requestedView&&views[requestedView])chooseView(requestedView,true);state.ready=true;culture.refresh();$('#walk').disabled=false;$('#loading').hidden=true;$('#state').textContent=`WebGPU · ${state.loaded.length}/${assetCatalog.length} 单件已接入 · 8 匹马与牧马人动作已接入`;
-   if(state.failed.length){$('#state').textContent+=` · ${state.failed.map(a=>a.id).join('、')} 加载失败`;$('#loading').hidden=false;$('#loading-text').textContent='部分素材加载失败，请检查网络后重新加载。';}
+   const requestedView=new URL(location.href).searchParams.get('view');if(requestedView&&views[requestedView])chooseView(requestedView,true);state.ready=true;culture.refresh();$('#walk').disabled=false;$('#loading').hidden=true;$('#state').textContent='清宫旧藏 · 绢本设色手卷';
+   if(state.failed.length){$('#state').textContent='部分画卷素材加载未完成，请刷新重试';$('#loading').hidden=false;$('#loading-text').textContent='部分素材加载失败，请检查网络后重新加载。';}
   });
   renderer.setAnimationLoop(()=>{
    if(disposed||document.hidden){last=performance.now();return;}
